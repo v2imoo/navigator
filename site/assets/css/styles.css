@@ -134,3 +134,26 @@ table.raci select{border:1px solid var(--line-2);border-radius:6px;padding:2px 4
 .faq-item summary{cursor:pointer;font-weight:600;color:var(--deep);padding:10px 0;font-family:var(--f-display)}
 .faq-item summary::marker{color:var(--aqua)}
 .faq-item div{color:var(--ink-soft);padding:0 0 12px}
+
+/* --- home-page components (refined sea theme) --- */
+.section{padding:8px 0}
+.sec-eyebrow,.kicker{font-family:var(--f-ui);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;font-weight:600;color:var(--aqua);margin:0 0 .3em;display:block}
+.hero{padding:44px 0 20px}
+.hero h1{font-size:2.7rem;line-height:1.1;margin:.1em 0 .3em;max-width:16ch}
+.hero .lead{font-size:1.2rem;margin:.2em 0 1.3em}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:1.2em 0}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:32px;align-items:center}
+.hero-collage{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.hero-collage .avatar,.hero-collage>div{width:88px;height:88px;border-radius:50%;background:var(--tint);
+  display:flex;align-items:center;justify-content:center;font-family:var(--f-display);font-weight:600;
+  color:var(--sea);font-size:1.4rem;border:1px solid var(--line-2);background-size:cover;background-position:center top}
+.trust{display:flex;flex-wrap:wrap;gap:26px;margin:1.4em 0 0;padding-top:1.2em;border-top:1px solid var(--line)}
+.trust>div{font-size:.92rem;color:var(--ink-soft)}
+.num,.hl{font-family:var(--f-display);color:var(--deep);font-weight:600}
+.num{font-size:1.5rem;display:block;line-height:1}
+.hl{color:var(--sea)}
+.chiplet{display:inline-block;font-family:var(--f-ui);font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;
+  font-weight:600;color:var(--sea);background:var(--tint);border-radius:999px;padding:.24em .7em;margin-bottom:.5em}
+.path .num{color:var(--aqua)}
+.card .path,.path{display:block}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.hero h1{font-size:2.1rem}}
