@@ -1,0 +1,14 @@
+# Navigator
+
+> Learn from the greats — and the ones who built beside them.
+
+Navigator is an open, no-login learning studio for how the world's greatest people and companies think, build, and decide — with usable tools, deep guides, and a living newsletter. Free for leaders, employees, students, and managers in every industry.
+
+Open, no-login educational library. Sections:
+- /mental-models/ decision lenses (~1045)
+- /decision-tools/ 44 methods
+- /business-models/ /frameworks/ /moats/ strategy
+- /books/ /reading-lists/ /guides/ /quotes/ learning
+- /tools/ interactive tools
+- /newsletter/ weekly breakdowns
+Contact: wvijay@icloud.com
