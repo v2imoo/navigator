@@ -1,0 +1,224 @@
+[
+{
+"slug": "activation-energy",
+"name": "Activation Energy",
+"blurb": "why the first step dominates, and how to lower the friction that keeps you from starting.",
+"category": "Guide"
+},
+{
+"slug": "the-butterfly-effect",
+"name": "The Butterfly Effect",
+"blurb": "how tiny differences in starting conditions produce wildly different outcomes.",
+"category": "Guide"
+},
+{
+"slug": "circle-of-competence",
+"name": "Circle of Competence",
+"blurb": "knowing exactly where your real understanding ends, which is where catastrophe usually begins.",
+"category": "Guide"
+},
+{
+"slug": "entropy",
+"name": "Entropy",
+"blurb": "why things fall apart by default, and why maintenance is never optional.",
+"category": "Guide"
+},
+{
+"slug": "ethos-pathos-logos",
+"name": "Ethos, Pathos, Logos",
+"blurb": "Aristotle's three engines of persuasion and how to use them together.",
+"category": "Guide"
+},
+{
+"slug": "first-principles-thinking",
+"name": "First Principles Thinking",
+"blurb": "breaking a problem to its fundamentals and reasoning up, instead of by analogy.",
+"category": "Guide"
+},
+{
+"slug": "hanlons-razor",
+"name": "Hanlon's Razor",
+"blurb": "assume incompetence before malice, and you'll misdiagnose fewer problems.",
+"category": "Guide"
+},
+{
+"slug": "inversion",
+"name": "Inversion",
+"blurb": "solve forward problems backward: ask what guarantees failure, then avoid it.",
+"category": "Guide"
+},
+{
+"slug": "occams-razor",
+"name": "Occam's Razor",
+"blurb": "prefer the simplest explanation that fits, and know when simple isn't enough.",
+"category": "Guide"
+},
+{
+"slug": "second-order-thinking",
+"name": "Second-Order Thinking",
+"blurb": "trace the consequences of the consequences before you act.",
+"category": "Guide"
+},
+{
+"slug": "survivorship-bias",
+"name": "Survivorship Bias",
+"blurb": "why studying only the winners quietly ruins your conclusions.",
+"category": "Guide"
+},
+{
+"slug": "the-map-is-not-the-territory",
+"name": "The Map is Not the Territory",
+"blurb": "every model is wrong; the danger is forgetting it's a model.",
+"category": "Guide"
+},
+{
+"slug": "thought-experiments",
+"name": "Thought Experiments",
+"blurb": "how to test ideas that can't be tested physically.",
+"category": "Guide"
+},
+{
+"slug": "core-values",
+"name": "Core Values",
+"blurb": "the non-negotiables that decide for you when incentives conflict.",
+"category": "Guide"
+},
+{
+"slug": "deliberate-practice",
+"name": "Deliberate Practice",
+"blurb": "how experts actually improve, and why hours logged aren't the point.",
+"category": "Guide"
+},
+{
+"slug": "the-feynman-technique",
+"name": "The Feynman Technique",
+"blurb": "learn anything by explaining it simply enough to expose your own gaps.",
+"category": "Guide"
+},
+{
+"slug": "how-to-analyze-a-business-model",
+"name": "How to Analyze a Business Model",
+"blurb": "a structured way to see how a company creates, delivers, and captures value.",
+"category": "Guide"
+},
+{
+"slug": "how-to-become-a-great-leader",
+"name": "How to Become a Great Leader",
+"blurb": "the habits and mental models the most effective leaders share.",
+"category": "Guide"
+},
+{
+"slug": "how-to-build-a-moat",
+"name": "How to Build a Moat",
+"blurb": "a practical route to durable competitive advantage (pairs with the Moats category).",
+"category": "Guide"
+},
+{
+"slug": "how-to-build-good-habits",
+"name": "How to Build Good Habits",
+"blurb": "systems, environment, and identity — not willpower.",
+"category": "Guide"
+},
+{
+"slug": "how-to-develop-strategic-thinking",
+"name": "How to Develop Strategic Thinking",
+"blurb": "turning analysis into the intuition great operators run on.",
+"category": "Guide"
+},
+{
+"slug": "how-to-focus",
+"name": "How to Focus",
+"blurb": "engineering attention when distraction is the default.",
+"category": "Guide"
+},
+{
+"slug": "how-to-learn-faster",
+"name": "How to Learn Faster",
+"blurb": "spaced repetition, deliberate practice, interleaving, done right.",
+"category": "Guide"
+},
+{
+"slug": "how-to-make-better-decisions",
+"name": "How to Make Better Decisions",
+"blurb": "the processes that separate consistently good decision-makers from everyone else.",
+"category": "Guide"
+},
+{
+"slug": "how-to-remember-everything-you-read",
+"name": "How to Remember Everything You Read",
+"blurb": "active reading and a knowledge base that compounds.",
+"category": "Guide"
+},
+{
+"slug": "how-to-stay-motivated",
+"name": "How to Stay Motivated",
+"blurb": "motivation as a system you build, not a feeling you wait for.",
+"category": "Guide"
+},
+{
+"slug": "how-to-stop-procrastinating",
+"name": "How to Stop Procrastinating",
+"blurb": "why willpower fails and what design does instead.",
+"category": "Guide"
+},
+{
+"slug": "how-to-study-great-founders",
+"name": "How to Study Great Founders",
+"blurb": "turning biography into a personal operating system.",
+"category": "Guide"
+},
+{
+"slug": "how-to-think-better",
+"name": "How to Think Better",
+"blurb": "mental models, biases, and clear reasoning as a practice.",
+"category": "Guide"
+},
+{
+"slug": "man-in-the-arena",
+"name": "Man in the Arena",
+"blurb": "Roosevelt on credit belonging to those who act, not those who criticize.",
+"category": "Guide"
+},
+{
+"slug": "this-is-water",
+"name": "This is Water",
+"blurb": "David Foster Wallace on choosing what you pay attention to.",
+"category": "Guide"
+},
+{
+"slug": "life-lessons",
+"name": "Life Lessons",
+"blurb": "the ideas that recur across philosophy, business, and psychology.",
+"category": "Guide"
+},
+{
+"slug": "how-to-keep-judgment-when-the",
+"name": "How to Keep Judgment When the Model Is Confident",
+"blurb": "staying the human in the loop when a system sounds certain and is sometimes wrong. → deep sample in `13-guides-sample.md`.",
+"category": "Guide"
+},
+{
+"slug": "how-to-work-with-ai-agents",
+"name": "How to Work With AI Agents",
+"blurb": "delegating real work to agents while keeping accountability, verification, and escalation.",
+"category": "Guide"
+},
+{
+"slug": "how-to-learn-fast-in-the",
+"name": "How to Learn Fast in the AI Era",
+"blurb": "using AI as a tutor without outsourcing the understanding that makes you useful.",
+"category": "Guide"
+},
+{
+"slug": "how-to-build-a-data-moat",
+"name": "How to Build a Data Moat",
+"blurb": "accumulating proprietary, non-substitutable data as the durable advantage when models commoditize.",
+"category": "Guide"
+},
+{
+"slug": "how-to-keep-taste-when-generation",
+"name": "How to Keep Taste When Generation Is Free",
+"blurb": "developing the judgment to know which output is good when anyone can produce one.",
+"category": "Guide"
+}
+]

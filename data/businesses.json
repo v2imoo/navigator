@@ -1,0 +1,2246 @@
+[
+{
+"slug": "adobe",
+"name": "Adobe",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "amd",
+"name": "AMD",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "amazon",
+"name": "Amazon",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "applovin",
+"name": "AppLovin",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "apple",
+"name": "Apple",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "applied-materials",
+"name": "Applied Materials",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "arm",
+"name": "ARM",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "asml",
+"name": "ASML",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "atlassian",
+"name": "Atlassian",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "axon",
+"name": "Axon",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "basecamp",
+"name": "Basecamp",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "brainpool",
+"name": "Brainpool",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "cadence",
+"name": "Cadence",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "cisco",
+"name": "Cisco",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "constellation-software",
+"name": "Constellation Software",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "crowdstrike",
+"name": "CrowdStrike",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "databricks",
+"name": "Databricks",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "datadog",
+"name": "Datadog",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "deel",
+"name": "Deel",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "dell",
+"name": "Dell",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "dolby",
+"name": "Dolby",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "dropbox",
+"name": "Dropbox",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "entegris",
+"name": "Entegris",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "foxconn",
+"name": "Foxconn",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "github",
+"name": "GitHub",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "google",
+"name": "Google (Alphabet)",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "google-maps",
+"name": "Google Maps",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "hewlett-packard",
+"name": "Hewlett-Packard",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "hotmail",
+"name": "Hotmail",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "ibm",
+"name": "IBM",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "intel",
+"name": "Intel",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "interdigital",
+"name": "InterDigital",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "intuit",
+"name": "Intuit",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "logitech",
+"name": "Logitech",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "mailchimp",
+"name": "Mailchimp",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "match-group",
+"name": "Match Group",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "meituan",
+"name": "Meituan",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "microsoft",
+"name": "Microsoft",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "mongodb",
+"name": "MongoDB",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "motorola-solutions",
+"name": "Motorola Solutions",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "mozilla",
+"name": "Mozilla",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "nvidia",
+"name": "NVIDIA",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "oracle",
+"name": "Oracle",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "palantir",
+"name": "Palantir",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "panasonic",
+"name": "Panasonic",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "pebble-technology",
+"name": "Pebble Technology",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "polaroid",
+"name": "Polaroid",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "qualcomm",
+"name": "Qualcomm",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "qualtrics",
+"name": "Qualtrics",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "salesforce",
+"name": "Salesforce",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "samsung",
+"name": "Samsung",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "sap",
+"name": "SAP",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "scale-ai",
+"name": "Scale AI",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "shopify",
+"name": "Shopify",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "skype",
+"name": "Skype",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "slack",
+"name": "Slack",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "slideshare",
+"name": "SlideShare",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "streetline",
+"name": "Streetline",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "tiktok",
+"name": "TikTok",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "toast",
+"name": "Toast",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "tsmc",
+"name": "TSMC",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "twilio",
+"name": "Twilio",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "wechat",
+"name": "WeChat (Tencent)",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "whatsapp",
+"name": "WhatsApp",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "wix",
+"name": "Wix",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "xerox",
+"name": "Xerox",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "xiaomi",
+"name": "Xiaomi",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "zoho",
+"name": "Zoho",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "zoom",
+"name": "Zoom",
+"category": "TECHNOLOGY",
+"blurb": ""
+},
+{
+"slug": "abbot-downing",
+"name": "Abbot Downing",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "adyen",
+"name": "Adyen",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "afterpay",
+"name": "Afterpay",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "aig",
+"name": "AIG",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "american-express",
+"name": "American Express",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "anchorage-digital",
+"name": "Anchorage Digital",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "apollo",
+"name": "Apollo",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "arthur-j-gallagher",
+"name": "Arthur J. Gallagher",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "bajaj-finance",
+"name": "Bajaj Finance",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "benchmark-capital",
+"name": "Benchmark Capital",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "berkshire-hathaway",
+"name": "Berkshire Hathaway",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "blackstone",
+"name": "Blackstone",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "block",
+"name": "Block",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "brookfield-asset-management",
+"name": "Brookfield Asset Management",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "charles-schwab",
+"name": "Charles Schwab",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "cme-group",
+"name": "CME Group",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "composecure",
+"name": "CompoSecure",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "equifax",
+"name": "Equifax",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "eqt",
+"name": "EQT",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "fico",
+"name": "FICO",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "first-citizens-bank",
+"name": "First Citizens Bank",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "goldman-sachs",
+"name": "Goldman Sachs",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "interactive-brokers",
+"name": "Interactive Brokers",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "kaspikz",
+"name": "Kaspi.kz",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "london-stock-exchange-group",
+"name": "London Stock Exchange Group",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "lseg",
+"name": "LSEG",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "markel",
+"name": "Markel",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "mastercard",
+"name": "Mastercard",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "moodys",
+"name": "Moody's",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "nubank",
+"name": "Nubank",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "paypal",
+"name": "PayPal",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "ramp",
+"name": "Ramp",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "renaissance-technologies",
+"name": "Renaissance Technologies",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "robinhood",
+"name": "Robinhood",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "sequoia-capital",
+"name": "Sequoia Capital",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "stripe",
+"name": "Stripe",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "vanguard",
+"name": "Vanguard",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "visa",
+"name": "Visa",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "wise",
+"name": "Wise",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "y-combinator",
+"name": "Y Combinator",
+"category": "FINANCE",
+"blurb": ""
+},
+{
+"slug": "agilent",
+"name": "Agilent",
+"category": "HEALTHCARE",
+"blurb": ""
+},
+{
+"slug": "argenx",
+"name": "Argenx",
+"category": "HEALTHCARE",
+"blurb": ""
+},
+{
+"slug": "bayer",
+"name": "Bayer",
+"category": "HEALTHCARE",
+"blurb": ""
+},
+{
+"slug": "chemed",
+"name": "Chemed",
+"category": "HEALTHCARE",
+"blurb": ""
+},
+{
+"slug": "dexcom",
+"name": "Dexcom",
+"category": "HEALTHCARE",
+"blurb": ""
+},
+{
+"slug": "doximity",
+"name": "Doximity",
+"category": "HEALTHCARE",
+"blurb": ""
+},
+{
+"slug": "epic-systems",
+"name": "Epic Systems",
+"category": "HEALTHCARE",
+"blurb": ""
+},
+{
+"slug": "intuitive-surgical",
+"name": "Intuitive Surgical",
+"category": "HEALTHCARE",
+"blurb": ""
+},
+{
+"slug": "invisalign",
+"name": "Invisalign (Align Technology)",
+"category": "HEALTHCARE",
+"blurb": ""
+},
+{
+"slug": "johnson-johnson",
+"name": "Johnson & Johnson",
+"category": "HEALTHCARE",
+"blurb": ""
+},
+{
+"slug": "merck-co",
+"name": "Merck & Co",
+"category": "HEALTHCARE",
+"blurb": ""
+},
+{
+"slug": "moderna",
+"name": "Moderna",
+"category": "HEALTHCARE",
+"blurb": ""
+},
+{
+"slug": "novo-nordisk",
+"name": "Novo Nordisk",
+"category": "HEALTHCARE",
+"blurb": ""
+},
+{
+"slug": "novocure",
+"name": "Novocure",
+"category": "HEALTHCARE",
+"blurb": ""
+},
+{
+"slug": "smiledirectclub",
+"name": "SmileDirectClub",
+"category": "HEALTHCARE",
+"blurb": ""
+},
+{
+"slug": "unitedhealth-group",
+"name": "UnitedHealth Group",
+"category": "HEALTHCARE",
+"blurb": ""
+},
+{
+"slug": "abril",
+"name": "Abril",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "bertelsmann",
+"name": "Bertelsmann",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "caa",
+"name": "CAA (Creative Artists Agency)",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "craigslist",
+"name": "Craigslist",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "facebook",
+"name": "Facebook (Meta)",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "harvard-business-publishing",
+"name": "Harvard Business Publishing",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "informa",
+"name": "Informa",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "instagram",
+"name": "Instagram",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "jcdecaux",
+"name": "JCDecaux",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "linkedin",
+"name": "LinkedIn",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "nexstar-media",
+"name": "Nexstar Media",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "pinterest",
+"name": "Pinterest",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "shutterstock",
+"name": "Shutterstock",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "spotter",
+"name": "Spotter",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "the-new-york-times",
+"name": "The New York Times",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "wikipedia",
+"name": "Wikipedia",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "x",
+"name": "X",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "youtube",
+"name": "YouTube",
+"category": "MEDIA",
+"blurb": ""
+},
+{
+"slug": "blockbuster",
+"name": "Blockbuster",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "chesscom",
+"name": "Chess.com",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "electronic-arts",
+"name": "Electronic Arts",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "epic-games",
+"name": "Epic Games",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "games-workshop",
+"name": "Games Workshop",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "humble-bundle",
+"name": "Humble Bundle",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "mojang",
+"name": "Mojang",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "napster",
+"name": "Napster",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "netflix",
+"name": "Netflix",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "nintendo",
+"name": "Nintendo",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "rec-room",
+"name": "Rec Room",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "roblox",
+"name": "Roblox",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "roku",
+"name": "Roku",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "sega",
+"name": "Sega",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "sony",
+"name": "Sony",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "spotify",
+"name": "Spotify",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "take-two-interactive",
+"name": "Take-Two Interactive",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "the-walt-disney-company",
+"name": "The Walt Disney Company",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "universal-music-group",
+"name": "Universal Music Group",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "valve-corporation",
+"name": "Valve Corporation",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "viacomcbs",
+"name": "ViacomCBS (Paramount)",
+"category": "ENTERTAINMENT",
+"blurb": ""
+},
+{
+"slug": "aldi",
+"name": "Aldi",
+"category": "RETAIL",
+"blurb": ""
+},
+{
+"slug": "autozone",
+"name": "AutoZone",
+"category": "RETAIL",
+"blurb": ""
+},
+{
+"slug": "best-buy",
+"name": "Best Buy",
+"category": "RETAIL",
+"blurb": ""
+},
+{
+"slug": "caseys-general-stores",
+"name": "Casey's General Stores",
+"category": "RETAIL",
+"blurb": ""
+},
+{
+"slug": "costco",
+"name": "CostCo",
+"category": "RETAIL",
+"blurb": ""
+},
+{
+"slug": "denner",
+"name": "Denner",
+"category": "RETAIL",
+"blurb": ""
+},
+{
+"slug": "dino-polska",
+"name": "Dino Polska",
+"category": "RETAIL",
+"blurb": ""
+},
+{
+"slug": "floor-decor",
+"name": "Floor & Decor",
+"category": "RETAIL",
+"blurb": ""
+},
+{
+"slug": "homebuy",
+"name": "HomeBuy",
+"category": "RETAIL",
+"blurb": ""
+},
+{
+"slug": "ikea",
+"name": "IKEA",
+"category": "RETAIL",
+"blurb": ""
+},
+{
+"slug": "petco",
+"name": "Petco",
+"category": "RETAIL",
+"blurb": ""
+},
+{
+"slug": "restoration-hardware",
+"name": "Restoration Hardware (RH)",
+"category": "RETAIL",
+"blurb": ""
+},
+{
+"slug": "the-home-depot",
+"name": "The Home Depot",
+"category": "RETAIL",
+"blurb": ""
+},
+{
+"slug": "trader-joes",
+"name": "Trader Joe's",
+"category": "RETAIL",
+"blurb": ""
+},
+{
+"slug": "walmart",
+"name": "Walmart",
+"category": "RETAIL",
+"blurb": ""
+},
+{
+"slug": "warby-parker",
+"name": "Warby Parker",
+"category": "RETAIL",
+"blurb": ""
+},
+{
+"slug": "alibaba",
+"name": "Alibaba",
+"category": "E-COMMERCE",
+"blurb": ""
+},
+{
+"slug": "blacksocks",
+"name": "Blacksocks",
+"category": "E-COMMERCE",
+"blurb": ""
+},
+{
+"slug": "cdnow",
+"name": "CDnow",
+"category": "E-COMMERCE",
+"blurb": ""
+},
+{
+"slug": "chewy",
+"name": "Chewy",
+"category": "E-COMMERCE",
+"blurb": ""
+},
+{
+"slug": "coupang",
+"name": "Coupang",
+"category": "E-COMMERCE",
+"blurb": ""
+},
+{
+"slug": "ebay",
+"name": "eBay",
+"category": "E-COMMERCE",
+"blurb": ""
+},
+{
+"slug": "faire",
+"name": "Faire",
+"category": "E-COMMERCE",
+"blurb": ""
+},
+{
+"slug": "fanatics",
+"name": "Fanatics",
+"category": "E-COMMERCE",
+"blurb": ""
+},
+{
+"slug": "flyeralarm",
+"name": "Flyeralarm",
+"category": "E-COMMERCE",
+"blurb": ""
+},
+{
+"slug": "groupon",
+"name": "Groupon",
+"category": "E-COMMERCE",
+"blurb": ""
+},
+{
+"slug": "ipsy",
+"name": "IPSY",
+"category": "E-COMMERCE",
+"blurb": ""
+},
+{
+"slug": "mercado-libre",
+"name": "Mercado Libre",
+"category": "E-COMMERCE",
+"blurb": ""
+},
+{
+"slug": "pinduoduo",
+"name": "Pinduoduo",
+"category": "E-COMMERCE",
+"blurb": ""
+},
+{
+"slug": "rakuten",
+"name": "Rakuten",
+"category": "E-COMMERCE",
+"blurb": ""
+},
+{
+"slug": "wayfair",
+"name": "Wayfair",
+"category": "E-COMMERCE",
+"blurb": ""
+},
+{
+"slug": "bacardi",
+"name": "Bacardi",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "cava",
+"name": "Cava",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "chipotle",
+"name": "Chipotle",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "cinnabon",
+"name": "Cinnabon",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "coca-cola",
+"name": "Coca-Cola",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "doordash",
+"name": "DoorDash",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "felfel",
+"name": "FELFEL",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "hellofresh",
+"name": "HelloFresh",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "hershey",
+"name": "Hershey",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "kfc",
+"name": "KFC",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "krispy-kreme",
+"name": "Krispy Kreme",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "liquid-death",
+"name": "Liquid Death",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "mars-inc",
+"name": "Mars Inc.",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "max-havelaar",
+"name": "Max Havelaar",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "mcdonalds",
+"name": "McDonald's",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "monsanto",
+"name": "Monsanto",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "nespresso",
+"name": "Nespresso",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "nestle",
+"name": "Nestle",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "nestl-nespresso",
+"name": "Nestlé Nespresso",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "nutella",
+"name": "Nutella (Ferrero)",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "panda-express",
+"name": "Panda Express",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "panera-bread-bakery",
+"name": "Panera Bread Bakery",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "pepsi",
+"name": "Pepsi",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "pernod-ricard",
+"name": "Pernod Ricard",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "red-bull",
+"name": "Red Bull",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "richelieu-foods",
+"name": "Richelieu Foods",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "starbucks",
+"name": "Starbucks",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "subway",
+"name": "Subway",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "taco-bell",
+"name": "Taco Bell",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "tchibo",
+"name": "Tchibo",
+"category": "FOOD & BEVERAGE",
+"blurb": ""
+},
+{
+"slug": "bic",
+"name": "BIC",
+"category": "CONSUMER GOODS",
+"blurb": ""
+},
+{
+"slug": "british-american-tobacco",
+"name": "British American Tobacco",
+"category": "CONSUMER GOODS",
+"blurb": ""
+},
+{
+"slug": "cewe-color",
+"name": "CEWE Color",
+"category": "CONSUMER GOODS",
+"blurb": ""
+},
+{
+"slug": "colgate",
+"name": "Colgate",
+"category": "CONSUMER GOODS",
+"blurb": ""
+},
+{
+"slug": "dollar-shave-club",
+"name": "Dollar Shave Club",
+"category": "CONSUMER GOODS",
+"blurb": ""
+},
+{
+"slug": "gillette",
+"name": "Gillette",
+"category": "CONSUMER GOODS",
+"blurb": ""
+},
+{
+"slug": "gopro",
+"name": "GoPro",
+"category": "CONSUMER GOODS",
+"blurb": ""
+},
+{
+"slug": "hindustan-unilever",
+"name": "Hindustan Unilever",
+"category": "CONSUMER GOODS",
+"blurb": ""
+},
+{
+"slug": "loreal",
+"name": "L'Oreal",
+"category": "CONSUMER GOODS",
+"blurb": ""
+},
+{
+"slug": "lego",
+"name": "LEGO",
+"category": "CONSUMER GOODS",
+"blurb": ""
+},
+{
+"slug": "miele",
+"name": "Miele",
+"category": "CONSUMER GOODS",
+"blurb": ""
+},
+{
+"slug": "payback",
+"name": "Payback",
+"category": "CONSUMER GOODS",
+"blurb": ""
+},
+{
+"slug": "play-doh",
+"name": "Play-Doh (Hasbro)",
+"category": "CONSUMER GOODS",
+"blurb": ""
+},
+{
+"slug": "procter-gamble",
+"name": "Procter & Gamble",
+"category": "CONSUMER GOODS",
+"blurb": ""
+},
+{
+"slug": "unilever",
+"name": "Unilever",
+"category": "CONSUMER GOODS",
+"blurb": ""
+},
+{
+"slug": "burberry",
+"name": "Burberry",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "cartier",
+"name": "Cartier",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "chanel",
+"name": "Chanel",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "essilorluxottica",
+"name": "EssilorLuxottica",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "ferretti",
+"name": "Ferretti",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "freitag-labag",
+"name": "Freitag lab.ag",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "hm",
+"name": "H&M",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "hermes",
+"name": "Hermes",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "inditex",
+"name": "Inditex (Zara)",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "kering",
+"name": "Kering",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "levis",
+"name": "Levi's",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "lululemon",
+"name": "Lululemon",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "lvmh",
+"name": "LVMH",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "moncler",
+"name": "Moncler",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "patek-philippe",
+"name": "Patek Philippe",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "rolex",
+"name": "Rolex",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "spanx",
+"name": "Spanx",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "swatch",
+"name": "Swatch",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "titan-company",
+"name": "Titan Company",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "zara",
+"name": "Zara",
+"category": "FASHION & LUXURY",
+"blurb": ""
+},
+{
+"slug": "brilliance-china-auto",
+"name": "Brilliance China Auto",
+"category": "AUTOMOTIVE",
+"blurb": ""
+},
+{
+"slug": "copart",
+"name": "Copart",
+"category": "AUTOMOTIVE",
+"blurb": ""
+},
+{
+"slug": "ferrari",
+"name": "Ferrari",
+"category": "AUTOMOTIVE",
+"blurb": ""
+},
+{
+"slug": "ford",
+"name": "Ford",
+"category": "AUTOMOTIVE",
+"blurb": ""
+},
+{
+"slug": "harley-davidson",
+"name": "Harley Davidson",
+"category": "AUTOMOTIVE",
+"blurb": ""
+},
+{
+"slug": "lamborghini",
+"name": "Lamborghini",
+"category": "AUTOMOTIVE",
+"blurb": ""
+},
+{
+"slug": "mercedes-benz",
+"name": "Mercedes-Benz",
+"category": "AUTOMOTIVE",
+"blurb": ""
+},
+{
+"slug": "porsche",
+"name": "Porsche",
+"category": "AUTOMOTIVE",
+"blurb": ""
+},
+{
+"slug": "renault",
+"name": "Renault",
+"category": "AUTOMOTIVE",
+"blurb": ""
+},
+{
+"slug": "toyota",
+"name": "Toyota",
+"category": "AUTOMOTIVE",
+"blurb": ""
+},
+{
+"slug": "vespa",
+"name": "Vespa (Piaggio)",
+"category": "AUTOMOTIVE",
+"blurb": ""
+},
+{
+"slug": "anduril",
+"name": "Anduril",
+"category": "AEROSPACE & DEFENSE",
+"blurb": ""
+},
+{
+"slug": "boeing",
+"name": "Boeing",
+"category": "AEROSPACE & DEFENSE",
+"blurb": ""
+},
+{
+"slug": "embraer",
+"name": "Embraer",
+"category": "AEROSPACE & DEFENSE",
+"blurb": ""
+},
+{
+"slug": "ge-aerospace",
+"name": "GE Aerospace",
+"category": "AEROSPACE & DEFENSE",
+"blurb": ""
+},
+{
+"slug": "heico",
+"name": "HEICO",
+"category": "AEROSPACE & DEFENSE",
+"blurb": ""
+},
+{
+"slug": "lockheed-martin",
+"name": "Lockheed Martin",
+"category": "AEROSPACE & DEFENSE",
+"blurb": ""
+},
+{
+"slug": "rolls-royce",
+"name": "Rolls-Royce",
+"category": "AEROSPACE & DEFENSE",
+"blurb": ""
+},
+{
+"slug": "spacex",
+"name": "SpaceX",
+"category": "AEROSPACE & DEFENSE",
+"blurb": ""
+},
+{
+"slug": "virgin-galactic",
+"name": "Virgin Galactic",
+"category": "AEROSPACE & DEFENSE",
+"blurb": ""
+},
+{
+"slug": "amphenol",
+"name": "Amphenol",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "atlas-copco",
+"name": "Atlas Copco",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "basf",
+"name": "BASF",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "bosch",
+"name": "Bosch",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "carnegie-steel",
+"name": "Carnegie Steel",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "cintas",
+"name": "Cintas",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "dupont",
+"name": "DuPont",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "ecolab",
+"name": "Ecolab",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "fastenal",
+"name": "Fastenal",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "hilti",
+"name": "Hilti",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "john-deere",
+"name": "John Deere",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "kingspan",
+"name": "Kingspan",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "renishaw",
+"name": "Renishaw",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "sherwin-williams",
+"name": "Sherwin-Williams",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "snap-on",
+"name": "Snap-on",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "somfy",
+"name": "Somfy",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "tetra-pak",
+"name": "Tetra Pak",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "trane-technologies",
+"name": "Trane Technologies",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "vulcan-materials",
+"name": "Vulcan Materials",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "watsco",
+"name": "Watsco",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "wrth",
+"name": "Würth",
+"category": "INDUSTRIAL",
+"blurb": ""
+},
+{
+"slug": "archaea-energy",
+"name": "Archaea Energy",
+"category": "ENERGY",
+"blurb": ""
+},
+{
+"slug": "bhp-billiton",
+"name": "BHP Billiton",
+"category": "ENERGY",
+"blurb": ""
+},
+{
+"slug": "easy-smart-grid",
+"name": "Easy Smart Grid",
+"category": "ENERGY",
+"blurb": ""
+},
+{
+"slug": "enron",
+"name": "Enron",
+"category": "ENERGY",
+"blurb": ""
+},
+{
+"slug": "exxon-mobil",
+"name": "Exxon Mobil",
+"category": "ENERGY",
+"blurb": ""
+},
+{
+"slug": "mineral-resources",
+"name": "Mineral Resources",
+"category": "ENERGY",
+"blurb": ""
+},
+{
+"slug": "nextera-energy",
+"name": "NextEra Energy",
+"category": "ENERGY",
+"blurb": ""
+},
+{
+"slug": "shell",
+"name": "Shell",
+"category": "ENERGY",
+"blurb": ""
+},
+{
+"slug": "siemens-energy",
+"name": "Siemens Energy",
+"category": "ENERGY",
+"blurb": ""
+},
+{
+"slug": "standard-oil",
+"name": "Standard Oil",
+"category": "ENERGY",
+"blurb": ""
+},
+{
+"slug": "standard-oil-company",
+"name": "Standard Oil Company",
+"category": "ENERGY",
+"blurb": ""
+},
+{
+"slug": "ubitricity",
+"name": "Ubitricity",
+"category": "ENERGY",
+"blurb": ""
+},
+{
+"slug": "vistra-corp",
+"name": "Vistra Corp",
+"category": "ENERGY",
+"blurb": ""
+},
+{
+"slug": "vitol",
+"name": "Vitol",
+"category": "ENERGY",
+"blurb": ""
+},
+{
+"slug": "att",
+"name": "AT&T",
+"category": "TELECOMMUNICATIONS",
+"blurb": ""
+},
+{
+"slug": "charter-communications",
+"name": "Charter Communications",
+"category": "TELECOMMUNICATIONS",
+"blurb": ""
+},
+{
+"slug": "huawei",
+"name": "Huawei",
+"category": "TELECOMMUNICATIONS",
+"blurb": ""
+},
+{
+"slug": "mtn-group",
+"name": "MTN Group",
+"category": "TELECOMMUNICATIONS",
+"blurb": ""
+},
+{
+"slug": "nokia",
+"name": "Nokia",
+"category": "TELECOMMUNICATIONS",
+"blurb": ""
+},
+{
+"slug": "verizon-communications",
+"name": "Verizon Communications",
+"category": "TELECOMMUNICATIONS",
+"blurb": ""
+},
+{
+"slug": "bird",
+"name": "Bird",
+"category": "TRANSPORTATION",
+"blurb": ""
+},
+{
+"slug": "car2go",
+"name": "Car2Go",
+"category": "TRANSPORTATION",
+"blurb": ""
+},
+{
+"slug": "convoy",
+"name": "Convoy",
+"category": "TRANSPORTATION",
+"blurb": ""
+},
+{
+"slug": "deutsche-post",
+"name": "Deutsche Post",
+"category": "TRANSPORTATION",
+"blurb": ""
+},
+{
+"slug": "fedex",
+"name": "FedEx",
+"category": "TRANSPORTATION",
+"blurb": ""
+},
+{
+"slug": "lyft",
+"name": "Lyft",
+"category": "TRANSPORTATION",
+"blurb": ""
+},
+{
+"slug": "mobility-carsharing",
+"name": "Mobility Carsharing",
+"category": "TRANSPORTATION",
+"blurb": ""
+},
+{
+"slug": "sbb",
+"name": "SBB",
+"category": "TRANSPORTATION",
+"blurb": ""
+},
+{
+"slug": "shiprocket",
+"name": "Shiprocket",
+"category": "TRANSPORTATION",
+"blurb": ""
+},
+{
+"slug": "uber",
+"name": "Uber",
+"category": "TRANSPORTATION",
+"blurb": ""
+},
+{
+"slug": "union-pacific",
+"name": "Union Pacific",
+"category": "TRANSPORTATION",
+"blurb": ""
+},
+{
+"slug": "ups",
+"name": "UPS",
+"category": "TRANSPORTATION",
+"blurb": ""
+},
+{
+"slug": "amadeus-it",
+"name": "Amadeus IT",
+"category": "TRAVEL",
+"blurb": ""
+},
+{
+"slug": "american-airlines",
+"name": "American Airlines",
+"category": "TRAVEL",
+"blurb": ""
+},
+{
+"slug": "bookingcom",
+"name": "Booking.com",
+"category": "TRAVEL",
+"blurb": ""
+},
+{
+"slug": "dufl",
+"name": "DUFL",
+"category": "TRAVEL",
+"blurb": ""
+},
+{
+"slug": "lufthansa",
+"name": "Lufthansa",
+"category": "TRAVEL",
+"blurb": ""
+},
+{
+"slug": "qantas",
+"name": "Qantas",
+"category": "TRAVEL",
+"blurb": ""
+},
+{
+"slug": "ryanair",
+"name": "Ryanair",
+"category": "TRAVEL",
+"blurb": ""
+},
+{
+"slug": "airbnb",
+"name": "Airbnb",
+"category": "HOSPITALITY",
+"blurb": ""
+},
+{
+"slug": "marriott-international",
+"name": "Marriott International",
+"category": "HOSPITALITY",
+"blurb": ""
+},
+{
+"slug": "wyndham-hotels",
+"name": "Wyndham Hotels",
+"category": "HOSPITALITY",
+"blurb": ""
+},
+{
+"slug": "adidas",
+"name": "Adidas",
+"category": "SPORTS",
+"blurb": ""
+},
+{
+"slug": "fc-bayern-munich",
+"name": "FC Bayern Munich",
+"category": "SPORTS",
+"blurb": ""
+},
+{
+"slug": "formula-one",
+"name": "Formula One",
+"category": "SPORTS",
+"blurb": ""
+},
+{
+"slug": "ipl",
+"name": "IPL (Indian Premier League)",
+"category": "SPORTS",
+"blurb": ""
+},
+{
+"slug": "nba",
+"name": "NBA",
+"category": "SPORTS",
+"blurb": ""
+},
+{
+"slug": "nfl",
+"name": "NFL",
+"category": "SPORTS",
+"blurb": ""
+},
+{
+"slug": "nike",
+"name": "Nike",
+"category": "SPORTS",
+"blurb": ""
+},
+{
+"slug": "olympic-games",
+"name": "Olympic Games (IOC)",
+"category": "SPORTS",
+"blurb": ""
+},
+{
+"slug": "pga-tour",
+"name": "PGA Tour",
+"category": "SPORTS",
+"blurb": ""
+},
+{
+"slug": "under-armour",
+"name": "Under Armour",
+"category": "SPORTS",
+"blurb": ""
+},
+{
+"slug": "basic-fit",
+"name": "Basic-Fit",
+"category": "FITNESS",
+"blurb": ""
+},
+{
+"slug": "mcfit",
+"name": "McFit",
+"category": "FITNESS",
+"blurb": ""
+},
+{
+"slug": "orangetheory-fitness",
+"name": "Orangetheory Fitness",
+"category": "FITNESS",
+"blurb": ""
+},
+{
+"slug": "peloton",
+"name": "Peloton",
+"category": "FITNESS",
+"blurb": ""
+},
+{
+"slug": "ag1",
+"name": "AG1 (Athletic Greens)",
+"category": "HEALTH & WELLNESS",
+"blurb": ""
+},
+{
+"slug": "calm",
+"name": "Calm",
+"category": "HEALTH & WELLNESS",
+"blurb": ""
+},
+{
+"slug": "myprotein",
+"name": "MyProtein",
+"category": "HEALTH & WELLNESS",
+"blurb": ""
+},
+{
+"slug": "gartner",
+"name": "Gartner",
+"category": "CONSULTING",
+"blurb": ""
+},
+{
+"slug": "mckinsey-company",
+"name": "McKinsey & Company",
+"category": "CONSULTING",
+"blurb": ""
+},
+{
+"slug": "american-tower",
+"name": "American Tower",
+"category": "REAL ESTATE",
+"blurb": ""
+},
+{
+"slug": "compass",
+"name": "Compass",
+"category": "REAL ESTATE",
+"blurb": ""
+},
+{
+"slug": "dr-horton",
+"name": "D.R. Horton",
+"category": "REAL ESTATE",
+"blurb": ""
+},
+{
+"slug": "digitalbridge",
+"name": "DigitalBridge",
+"category": "REAL ESTATE",
+"blurb": ""
+},
+{
+"slug": "gensler",
+"name": "Gensler",
+"category": "REAL ESTATE",
+"blurb": ""
+},
+{
+"slug": "wework",
+"name": "WeWork",
+"category": "REAL ESTATE",
+"blurb": ""
+},
+{
+"slug": "exor",
+"name": "Exor",
+"category": "DIVERSIFIED",
+"blurb": ""
+},
+{
+"slug": "general-electric",
+"name": "General Electric",
+"category": "DIVERSIFIED",
+"blurb": ""
+},
+{
+"slug": "lifco",
+"name": "Lifco",
+"category": "DIVERSIFIED",
+"blurb": ""
+},
+{
+"slug": "mitsubishi-corporation",
+"name": "Mitsubishi Corporation",
+"category": "DIVERSIFIED",
+"blurb": ""
+},
+{
+"slug": "roper-technologies",
+"name": "Roper Technologies",
+"category": "DIVERSIFIED",
+"blurb": ""
+},
+{
+"slug": "virgin",
+"name": "Virgin",
+"category": "DIVERSIFIED",
+"blurb": ""
+}
+]
