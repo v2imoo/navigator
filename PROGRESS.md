@@ -88,3 +88,10 @@ Use this to resume in a fresh chat. Paste it in and say "continue from PROGRESS.
 4. Books/Reading Lists → full 9-section templates.
 5. Mental Models top-100 → full 11-section; Decision Tools 44 → full 9-section; Moats 7 → per-Power.
 6. Paths sequencing + Recommend engine.
+
+## FIX (v6 — clean URLs for Cloudflare/GitHub Pages)
+- Root cause of site-wide 404s: internal links ended in `index.html`, which Cloudflare Pages 404s (it serves clean URLs like /people/steve-jobs/).
+- `relativize()` now emits CLEAN directory URLs (no index.html). All 2,312 pages regenerated. Verified 0 index.html internal links.
+- Image scripts (wiki.js via MediaWiki Action API origin=*, books.js via OpenLibrary) also updated.
+- ACTION: redeploy the full `site/` once (links are baked into every page). After this, updates stay additive.
+- Preview locally with a static server (`cd site && python3 -m http.server 8000`), not by double-clicking files.

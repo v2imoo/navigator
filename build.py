@@ -15,13 +15,14 @@ SITE = {
 }
 PAGES=[]
 def relativize(content, depth):
-    """Rewrite root-absolute /links and /assets to correct relative paths so the
-    site renders both locally (file://, double-click) and when deployed."""
+    """Rewrite root-absolute /links and /assets to correct relative paths.
+    Uses CLEAN directory URLs (…/people/steve-jobs/) with NO index.html, which
+    is what Cloudflare Pages / GitHub Pages / Netlify serve. (Preview locally with
+    a static server, e.g. `python3 -m http.server`, not by double-clicking a file.)"""
     prefix="../"*depth
     def href_repl(m):
         g=m.group(1)
-        if g=="": return f'href="{prefix}index.html"'
-        if g.endswith("/"): return f'href="{prefix}{g}index.html"'
+        if g=="": return f'href="{prefix or "./"}"'
         return f'href="{prefix}{g}"'
     content=re.sub(r'href="/([^"]*)"', href_repl, content)
     content=re.sub(r'src="/([^"]*)"', lambda m:f'src="{prefix}{m.group(1)}"', content)
@@ -35,7 +36,7 @@ LEARN=[("Book Summaries","/books/"),("Reading Lists","/reading-lists/"),
        ("Guides","/guides/"),("Quote Collections","/quotes/")]
 
 def theta_brand(cls=""):
-    return f'<a class="brand {cls}" href="/"><span class="theta">&#920;</span><span>Navigator</span></a>'
+    return f'<a class="brand {cls}" href="/"><span class="theta">&#920;</span>&nbsp;NAVIGATOR</a>'
 
 def avatar(initials, cluster="brand", size=None, img=None):
     # colourful designed tile; if img path provided it is used, else initials
@@ -72,7 +73,7 @@ def head(title, desc, path, kind="website", jsonld=None):
 <meta name="twitter:description" content="{html.escape(desc)}">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Lexend:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/styles.css">
 <script type="application/ld+json">{json.dumps(org)}</script>
 <script type="application/ld+json">{json.dumps(website)}</script>
@@ -115,16 +116,12 @@ def footer():
 <script src="/assets/js/main.js"></script><script src="/assets/js/filter.js"></script><script src="/assets/js/wiki.js"></script><script src="/assets/js/books.js"></script></body></html>'''
 
 def head_band(chip_cls,chip_label,title,crumb=""):
-    hexv=CLUSTER_HEX.get(chip_cls,"#6C4CE0"); hx2=shade(hexv)
     crumb_html=f'<nav class="crumbs">{crumb}</nav>' if crumb else ''
-    return f'''<div class="head-band" style="background:linear-gradient(120deg,{hexv},{hx2})">
-<div class="blob" style="width:220px;height:220px;background:#fff;right:-40px;top:-60px"></div>
-<div class="blob" style="width:120px;height:120px;background:#fff;right:120px;bottom:-40px"></div>
-<div class="wrap">{crumb_html}<span class="chip">{chip_label}</span><h1>{html.escape(title)}</h1></div></div>'''
+    return f'''<div class="head-band hb-{chip_cls}"><div class="wrap">{crumb_html}<span class="eyebrow">{chip_label}</span><h1>{html.escape(title)}</h1></div></div>'''
 
 def newsletter_cta():
-    return ('<div class="newsletter-cta"><div class="blob" style="width:200px;height:200px;background:#fff;opacity:.12;right:-30px;top:-50px;position:absolute;border-radius:50%"></div>'
-      '<h3>Get the Navigator newsletter</h3><p style="max-width:46ch;margin:.4em auto 1em">New breakdowns of how the greats think, build, and decide &mdash; on LinkedIn and mirrored here.</p>'
+    return ('<div class="newsletter-cta">'
+      '<h3>Get the Navigator newsletter</h3><p style="max-width:48ch;margin:.4em auto 1.1em">New breakdowns of how the greats think, build, and decide &mdash; on LinkedIn and mirrored here.</p>'
       '<a class="btn" href="/newsletter/">Read the newsletter &rarr;</a></div>')
 
 def write(path,content,priority="0.7",freq="monthly"):
@@ -518,62 +515,116 @@ def _initials(name):
     if not ws: return "N"
     return (ws[0][:2] if len(ws)==1 else ws[0][0]+ws[1][0]).upper()
 
+def _faq(pairs, path):
+    qa="".join(f'<details class="faq-item"><summary>{q}</summary><div>{a}</div></details>' for q,a in pairs)
+    ld={"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":re.sub('<[^>]+>','',a)}} for q,a in pairs]}
+    return f'<h2>Frequently asked</h2><div class="faq">{qa}</div><script type="application/ld+json">{json.dumps(ld)}</script>'
+
 def render_item_page(x,key,base,cluster,chip,gf,sibs):
     name=x["name"]; s=x["slug"]; path=f"{base}{s}/"; blurb=(x.get("blurb") or "").strip()
     author=(x.get("author") or "").strip(); cat=x.get("category","") or TITLE[key]
-    if key=="books":
-        author=" ".join(author.split()[:2]) if author else ""   # de-garble extracted author
-    crumb=f'<a href="/">Home</a> &rsaquo; <a href="{base}">{TITLE[key]}</a>'
-    thesis = blurb if blurb else (f"{name} by {author}." if author else f"{name} — in Navigator's {TITLE[key]} collection.")
-    sib="".join(f'<a class="card fcard pcard" href="{base}{y["slug"]}/" data-name="{html.escape(y["name"].lower())}"><div class="card-media bg-{cluster}" {("data-wiki=\""+html.escape(y["name"])+"\"") if cluster in ("people","biz") else ""}>{_initials(y["name"]) if cluster in ("people","biz") else chip}</div><span class="chip {cluster}">{chip}</span><h3>{html.escape(y["name"])}</h3><p>{html.escape((y.get("blurb") or "")[:80])}</p></a>' for y in sibs)
+    if key=="books": author=" ".join(author.split()[:2]) if author else ""
+    E=html.escape; crumb=f'<a href="/">Home</a> &rsaquo; <a href="{base}">{TITLE[key]}</a>'
+    thesis = blurb if blurb else (f"{name} — a {TITLE[key][:-1].lower()} in Navigator's collection.")
+    sib="".join(f'<a class="card fcard pcard" href="{base}{y["slug"]}/" data-name="{E(y["name"].lower())}"><div class="card-media bg-{cluster}" {("data-wiki=\""+E(y["name"])+"\"") if cluster in ("people","biz") else ("data-book=\""+E(y["name"])+"\"" if key=="books" else "")}>{_initials(y["name"]) if cluster in ("people","biz") or key=="books" else chip}</div><span class="chip {cluster}">{chip}</span><h3>{E(y["name"])}</h3><p>{E((y.get("blurb") or "")[:80])}</p></a>' for y in sibs)
+    connected=f'<div class="section-title"><span class="dot bg-{cluster}"></span><h2 style="margin:0">Connected</h2></div><div class="grid c3">{sib}</div>'
+    footlinks=f'<div class="footer-links"><a href="{base}">All {TITLE[key]}</a><a href="/tools/">Tools</a><a href="/newsletter/">Newsletter</a></div>'
     art={"@context":"https://schema.org","@type":"Article","headline":name,"description":thesis[:160],
          "publisher":{"@type":"Organization","name":SITE["name"]},"mainEntityOfPage":SITE["url"]+path,"inLanguage":"en"}
     doc=head(name,thesis[:160],path,"article",art)+nav()+head_band(cluster,chip,name,crumb)
 
     if cluster in ("people","biz"):
         person = cluster=="people"
-        story = f"<p>{html.escape(blurb)}</p>" if blurb else ""
-        story += (f"<p>{html.escape(name)} is one of the <strong>{html.escape(cat)}</strong> profiles in Navigator's library of people and companies worth studying. "
-                  f"This profile is being expanded into the full narrative &mdash; the origins, the turning points, the pivotal decisions, and the lessons that transfer to your own work.</p>")
+        story = (f"<p>{E(blurb)}</p>" if blurb else "") + (
+            f"<p>{E(name)} is one of the <strong>{E(cat)}</strong> profiles in Navigator&rsquo;s library of people and companies worth studying closely. "
+            f"The aim here is not trivia but transfer: to pull out the decisions, habits, and structural bets that you can actually apply to your own work.</p>"
+            f"<p>As you read, treat this less like a biography and more like a case study. Ask what {E(name.split()[0])} understood early, what they were willing to be misunderstood about, and which advantages compounded quietly over years.</p>")
         if person:
-            playbook=("<h2>The playbook &mdash; what to study</h2><ul>"
-              "<li><strong>The early bet.</strong> What non-obvious wager did they make before it was obvious &mdash; and what did they see that others missed?</li>"
-              "<li><strong>What they refused to do.</strong> The disciplined <em>no</em>s often matter more than the yeses. Where did they stay narrow?</li>"
-              "<li><strong>The compounding advantage.</strong> What did they build that got stronger over time &mdash; a brand, a network, a system, a reputation?</li>"
-              "<li><strong>Decisions under uncertainty.</strong> How did they act when the facts were incomplete and the stakes were high?</li></ul>")
-            extra="<h2>In their own words</h2><p class=\"count-note\">Verified, correctly-attributed quotes are being added here &mdash; we don't publish quotes we can't source.</p>"
+            playbook=("<h2>The playbook &mdash; what to study</h2>"
+              "<p>Every operator worth studying repeats a small number of moves. These are the lenses to read this profile through:</p><ul>"
+              "<li><strong>The early bet.</strong> The non-obvious wager made before it was obvious &mdash; and what they saw that others missed.</li>"
+              "<li><strong>What they refused to do.</strong> The disciplined <em>no</em>s usually matter more than the yeses. Where did they stay narrow when it would have been easy to sprawl?</li>"
+              "<li><strong>The compounding advantage.</strong> The asset that got stronger over time &mdash; a brand, a network, a system, a reputation, a body of work.</li>"
+              "<li><strong>Decisions under uncertainty.</strong> How they acted when the facts were incomplete and the stakes were high.</li>"
+              "<li><strong>How they treated people.</strong> Who they hired, kept, and trusted &mdash; and the culture that resulted.</li></ul>")
+            apply_h=("<h2>How to apply their approach</h2><ul>"
+              "<li>Pick one decision you&rsquo;re facing this week and run it through their lens above.</li>"
+              "<li>Write down the one thing they&rsquo;d refuse to do in your situation &mdash; then consider refusing it too.</li>"
+              "<li>Name the compounding asset you could start building now that would look obvious in ten years.</li></ul>")
+            quotes="<h2>In their own words</h2><p class=\"count-note\">Verified, correctly-attributed quotes are added here as we confirm sources &mdash; we don&rsquo;t publish quotes we can&rsquo;t verify.</p>"
+            faq=_faq([(f"Who is {name}?", f"{E(name)} is a {E(cat).lower()} featured in Navigator&rsquo;s People library for the transferable lessons in how they think, build, and decide."),
+                      (f"What can you learn from {name}?", "Read the profile for the early bet they made, the things they refused to do, and the advantage that compounded over time &mdash; then apply those lenses to your own decisions."),
+                      ("How should I study a person like this?", "Treat the profile as a case study, not a biography: extract decisions and principles you can reuse, and pair it with the interactive tools and connected mental models.")], path)
+            extra=playbook+apply_h+quotes
         else:
-            playbook=("<h2>The playbook &mdash; how it really works</h2><ul>"
-              "<li><strong>The model.</strong> How does the business create, deliver, and capture value &mdash; and where does the margin actually come from?</li>"
-              "<li><strong>The moat.</strong> Which of the durable advantages (scale, network, switching costs, brand, counter-positioning, cornered resource, process) does it hold?</li>"
+            playbook=("<h2>The playbook &mdash; how it really works</h2>"
+              "<p>Behind every enduring company is a small set of structural choices. Read this profile for:</p><ul>"
+              "<li><strong>The model.</strong> How the business creates, delivers, and captures value &mdash; and where the margin actually comes from.</li>"
+              "<li><strong>The moat.</strong> Which durable advantage it holds: scale, network effects, switching costs, brand, counter-positioning, a cornered resource, or process power.</li>"
               "<li><strong>The turning points.</strong> The decisions and bets that changed the trajectory.</li>"
+              "<li><strong>The flywheel.</strong> The self-reinforcing loop that makes each part strengthen the others.</li>"
               "<li><strong>What breaks it.</strong> The structural risks and the competitors circling.</li></ul>")
-            extra="<h2>The breakdown</h2><p class=\"count-note\">Unit economics, key metrics, and the timeline are being added to this profile.</p>"
-        body=(f'<article class="doc"><h2>Story</h2>{story}{playbook}{extra}'
-              f'<h2>Connected</h2><div class="grid c3">{sib}</div>'
-              f'<div class="footer-links"><a href="{base}">All {TITLE[key]}</a><a href="/tools/">Tools</a><a href="/newsletter/">Newsletter</a></div></article>')
-        portrait=f'<div class="hero-portrait bg-{cluster}" data-wiki="{html.escape(name)}">{_initials(name)}</div>'
+            apply_h=("<h2>How to apply the lessons</h2><ul>"
+              "<li>Map your own business (or a business you admire) onto the model above.</li>"
+              "<li>Identify which of the seven durable advantages you actually hold &mdash; and which you only think you hold.</li>"
+              "<li>Name the flywheel you could push on this quarter.</li></ul>")
+            quotes=""
+            faq=_faq([(f"What is {name} known for?", f"{E(name)} is featured in Navigator&rsquo;s Businesses library as a case study in {E(cat).lower()} &mdash; how it makes money and why it&rsquo;s hard to displace."),
+                      (f"What&rsquo;s {name}&rsquo;s moat?", "See the playbook above: the profile examines which durable advantages &mdash; scale, network, switching costs, brand, counter-positioning, cornered resource, or process &mdash; the business actually holds."),
+                      ("How do I study a company well?", "Focus on the model, the moat, the flywheel, and what breaks it &mdash; then compare against peers using the Moat Analyzer tool.")], path)
+            extra=playbook+apply_h
+        body=(f'<article class="doc"><h2>Story</h2>{story}{extra}{connected}{faq}{footlinks}</article>')
+        portrait=f'<div class="hero-portrait bg-{cluster}" data-wiki="{E(name)}">{_initials(name)}</div>'
         doc+=(f'<main class="wrap"><div class="read">'
-              f'<div class="profile-head">{portrait}<div><p class="thesis" style="margin-top:0">{html.escape(thesis)}</p>'
-              f'<p class="mono" style="color:var(--ink-soft)">{html.escape(cat)}</p></div></div>'
+              f'<div class="profile-head">{portrait}<div><p class="thesis" style="margin-top:0">{E(thesis)}</p>'
+              f'<p class="mono" style="color:var(--ink-soft)">{E(cat)}</p></div></div>'
               f'{body}{newsletter_cta()}</div></main>')+footer()
-    else:
-        if blurb: about=f"<h2>The core idea</h2><p>{html.escape(blurb)}</p>"
-        else: about=(f'<h2>About</h2><p>{html.escape(name)} is part of Navigator\'s {html.escape(cat)} collection. '
-               f'A full write-up with the complete {TITLE[key]} template is being added. Meanwhile, explore the connected pages below and the <a href="/tools/">tools</a>.</p>')
-        if author: about=f'<p class="mono" style="color:var(--ink-soft)">by {html.escape(author)}</p>'+about
-        body=(f'<p class="thesis">{html.escape(thesis)}</p>{about}'
-              f'<h2>Connected</h2><div class="grid c3">{sib}</div>'
-              f'<div class="footer-links"><a href="{base}">All {TITLE[key]}</a><a href="/tools/">Tools</a><a href="/newsletter/">Newsletter</a></div>')
-        if key=="books":
-            headtile=f'<div class="hero-portrait bg-{cluster}" style="width:130px;height:190px;border-radius:12px" data-book="{html.escape(name)}">{_initials(name)}</div>'
-        else:
-            headtile=f'<div style="width:64px;flex:0 0 auto">{avatar(_initials(name),cluster)}</div>'
+    elif key=="books":
+        head_tile=f'<div class="hero-portrait bg-{cluster}" style="width:132px;height:196px;border-radius:12px" data-book="{E(name)}">{_initials(name)}</div>'
+        overview=f"<p>{E(blurb)}</p>" if blurb else ""
+        overview+=(f"<p><em>{E(name)}</em>{(' by '+E(author)) if author else ''} is part of Navigator&rsquo;s reading library. "
+                   f"This page frames what to look for and how to put the ideas to work &mdash; the summary is a guide to the book, not a replacement for it.</p>")
+        secs=("<h2>What to look for</h2><ul>"
+              "<li>The one central argument the author keeps returning to.</li>"
+              "<li>The two or three ideas you could actually use this month.</li>"
+              "<li>Where the book&rsquo;s advice would <em>not</em> apply &mdash; its limits.</li></ul>"
+              "<h2>How to apply it</h2><ul>"
+              "<li>Pick a single idea and design one small experiment around it this week.</li>"
+              "<li>Write the book&rsquo;s thesis in one sentence in your own words &mdash; if you can&rsquo;t, re-read.</li>"
+              "<li>Connect it to a decision you&rsquo;re facing and note what it would have you do differently.</li></ul>"
+              "<h2>Who should read it</h2><p>Anyone working on the problems this book addresses &mdash; and anyone building the reading habit Navigator is designed around. Pair it with the connected titles below.</p>")
+        faq=_faq([(f"What is {name} about?", f"{E(blurb) if blurb else E(name)+' is a book in Navigator&rsquo;s reading library.'} Read the page for what to look for and how to apply it."),
+                  ("Is this a full summary?", "No &mdash; Navigator points you to the ideas and how to use them, and links licensed sources for the full text. It never reproduces the book."),
+                  ("What should I read next?", "See the connected titles below and the reading lists they belong to.")], path)
         doc+=(f'<main class="wrap"><div class="read">'
-              f'<div style="display:flex;gap:16px;align-items:center;margin:2px 0 8px">'
-              f'{headtile}'
-              f'<div class="mono" style="color:var(--ink-soft)">{html.escape(cat)}</div></div>'
-              f'<article class="doc">{body}</article>{newsletter_cta()}</div></main>')+footer()
+              f'<div class="profile-head">{head_tile}<div><p class="thesis" style="margin-top:0">{E(thesis)}</p>'
+              f'<p class="mono" style="color:var(--ink-soft)">{("by "+E(author)) if author else E(cat)}</p></div></div>'
+              f'<article class="doc"><h2>Overview</h2>{overview}{secs}{connected}{faq}{footlinks}</article>'
+              f'{newsletter_cta()}</div></main>')+footer()
+    else:
+        overview=f"<p>{E(blurb)}</p>" if blurb else f"<p>{E(name)} is part of Navigator&rsquo;s {E(cat)} collection.</p>"
+        why=("<h2>Why it matters</h2><p>Good thinking is mostly a matter of reaching for the right lens at the right moment. "
+             f"{E(name)} earns its place in the toolkit because it changes what you notice: it reframes a familiar situation so the important part becomes obvious and the noise falls away.</p>")
+        howto=("<h2>How to apply it</h2><ol>"
+               f"<li><strong>Name the situation.</strong> Write down the decision or problem where {E(name)} might apply.</li>"
+               "<li><strong>Run it through the lens.</strong> Ask the one question this idea forces you to ask.</li>"
+               "<li><strong>Act on what changes.</strong> If the lens changed your answer, change your plan &mdash; that&rsquo;s the whole point.</li></ol>")
+        pit=("<h2>Common pitfalls</h2><ul>"
+             "<li>Using it as a label instead of a tool &mdash; naming the model isn&rsquo;t the same as applying it.</li>"
+             "<li>Reaching for it everywhere; every lens has a domain where it stops being useful.</li>"
+             "<li>Stopping at insight instead of changing a decision.</li></ul>")
+        faq=_faq([(f"What is {name}?", f"{E(blurb) if blurb else E(name)+' is part of Navigator&rsquo;s '+E(cat)+' collection.'}"),
+                  (f"When should I use {name}?", "Use it when you&rsquo;re facing the kind of situation it was built for &mdash; see &ldquo;How to apply it&rdquo; above &mdash; and pair it with the connected ideas and tools."),
+                  ("How does this connect to the rest of Navigator?", "It links into the wider graph of mental models, tools, people, and businesses &mdash; follow the connected cards below.")], path)
+        if author: overview=f'<p class="mono" style="color:var(--ink-soft)">by {E(author)}</p>'+overview
+        headtile=f'<div style="width:64px;flex:0 0 auto">{avatar(_initials(name),cluster)}</div>'
+        doc+=(f'<main class="wrap"><div class="read">'
+              f'<div style="display:flex;gap:16px;align-items:center;margin:2px 0 8px">{headtile}'
+              f'<div class="mono" style="color:var(--ink-soft)">{E(cat)}</div></div>'
+              f'<p class="thesis">{E(thesis)}</p>'
+              f'<article class="doc"><h2>Overview</h2>{overview}{why}{howto}{pit}{connected}{faq}{footlinks}</article>'
+              f'{newsletter_cta()}</div></main>')+footer()
     write(path,doc,"0.6")
 
 def render_full_index(key,base,cluster,chip,gf,sym,items):
