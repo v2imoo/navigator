@@ -28,7 +28,7 @@ def relativize(content, depth):
     content=re.sub(r'src="/([^"]*)"', lambda m:f'src="{prefix}{m.group(1)}"', content)
     return content
 
-CLUSTER_HEX={"people":"#FB8B24","biz":"#06A6A0","strat":"#4361EE","learn":"#2FBF71","tools":"#F0544F","news":"#9B5DE5","brand":"#6C4CE0"}
+CLUSTER_HEX={"people":"#FB8B24","biz":"#06A6A0","strat":"#4361EE","learn":"#2FBF71","tools":"#F0544F","news":"#9B5DE5","brand":"#0C5460"}
 
 STRAT=[("Mental Models","/mental-models/"),("Decision Tools","/decision-tools/"),
        ("Business Models","/business-models/"),("Frameworks","/frameworks/"),("Moats","/moats/")]
@@ -40,7 +40,7 @@ def theta_brand(cls=""):
 
 def avatar(initials, cluster="brand", size=None, img=None):
     # colourful designed tile; if img path provided it is used, else initials
-    c=CLUSTER_HEX.get(cluster,"#6C4CE0")
+    c=CLUSTER_HEX.get(cluster,"#0C5460")
     style=f'background:linear-gradient(135deg,{c},{shade(c)});'
     if size: style+=f'width:{size};height:{size};'
     inner=f'<img src="{img}" alt="{html.escape(initials)}">' if img else html.escape(initials)
@@ -48,8 +48,8 @@ def avatar(initials, cluster="brand", size=None, img=None):
 
 def shade(hexv):
     # darken/rotate a hex for gradient end
-    m={"#FB8B24":"#F0544F","#06A6A0":"#4361EE","#4361EE":"#6C4CE0","#2FBF71":"#06A6A0",
-       "#F0544F":"#FF6FB5","#9B5DE5":"#6C4CE0","#6C4CE0":"#06A6A0"}
+    m={"#FB8B24":"#F0544F","#06A6A0":"#4361EE","#4361EE":"#0C5460","#2FBF71":"#06A6A0",
+       "#F0544F":"#FF6FB5","#9B5DE5":"#0C5460","#0C5460":"#06A6A0"}
     return m.get(hexv,"#06A6A0")
 
 def head(title, desc, path, kind="website", jsonld=None):
@@ -65,7 +65,7 @@ def head(title, desc, path, kind="website", jsonld=None):
 <link rel="canonical" href="{canon}">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="author" content="{SITE["author"]}">
-<meta name="theme-color" content="#6C4CE0">
+<meta name="theme-color" content="#0C5460">
 <meta property="og:type" content="{kind}"><meta property="og:site_name" content="{SITE["name"]}">
 <meta property="og:title" content="{html.escape(title)}"><meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:url" content="{canon}"><meta property="og:image" content="{SITE["url"]}/assets/img/og.svg">
@@ -379,9 +379,9 @@ def main():
     os.makedirs(OUT)
     shutil.copytree(os.path.join(ROOT,"assets"),os.path.join(OUT,"assets"))
     # favicon + og (theta mark)
-    favicon='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6C4CE0"/><stop offset="1" stop-color="#06A6A0"/></linearGradient></defs><circle cx="24" cy="24" r="22" fill="url(#g)"/><text x="24" y="34" font-family="Georgia,serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="bold">&#920;</text></svg>'
+    favicon='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0C5460"/><stop offset="1" stop-color="#06A6A0"/></linearGradient></defs><circle cx="24" cy="24" r="22" fill="url(#g)"/><text x="24" y="34" font-family="Georgia,serif" font-size="30" fill="#fff" text-anchor="middle" font-weight="bold">&#920;</text></svg>'
     open(os.path.join(OUT,"assets","img","favicon.svg"),"w").write(favicon)
-    og='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6C4CE0"/><stop offset="1" stop-color="#06A6A0"/></linearGradient></defs><rect width="1200" height="630" fill="#FFFDF6"/><circle cx="150" cy="150" r="90" fill="url(#g)"/><text x="150" y="188" font-family="Georgia,serif" font-size="120" fill="#fff" text-anchor="middle" font-weight="bold">&#920;</text><text x="290" y="175" font-family="Georgia,serif" font-size="86" fill="#2A2140" font-weight="bold">Navigator</text><text x="150" y="360" font-family="sans-serif" font-size="46" fill="#2A2140" font-weight="bold">Learn how the greats think, build &amp; decide.</text><text x="150" y="430" font-family="sans-serif" font-size="30" fill="#6a5f82">Open &middot; No login &middot; Tools you actually use &middot; navigator.blog</text></svg>'
+    og='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0C5460"/><stop offset="1" stop-color="#06A6A0"/></linearGradient></defs><rect width="1200" height="630" fill="#FFFDF6"/><circle cx="150" cy="150" r="90" fill="url(#g)"/><text x="150" y="188" font-family="Georgia,serif" font-size="120" fill="#fff" text-anchor="middle" font-weight="bold">&#920;</text><text x="290" y="175" font-family="Georgia,serif" font-size="86" fill="#2A2140" font-weight="bold">Navigator</text><text x="150" y="360" font-family="sans-serif" font-size="46" fill="#2A2140" font-weight="bold">Learn how the greats think, build &amp; decide.</text><text x="150" y="430" font-family="sans-serif" font-size="30" fill="#6a5f82">Open &middot; No login &middot; Tools you actually use &middot; navigator.blog</text></svg>'
     open(os.path.join(OUT,"assets","img","og.svg"),"w").write(og)
 
     render_home(); render_about(); render_contact(); render_legal(); render_newsletter(); render_tools_hub(); render_ai()
