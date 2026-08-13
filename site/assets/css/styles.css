@@ -196,3 +196,14 @@ table.raci select{border:1px solid var(--line-2);border-radius:6px;padding:2px 4
 .cols{display:grid;gap:24px}
 @media(max-width:900px){.nav-links{display:none}.menu-btn{display:inline-flex}.site-footer .cols{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.site-footer .cols{grid-template-columns:1fr}}
+
+/* === compact footer === */
+.site-footer{margin-top:32px}
+.site-footer .cols{grid-template-columns:2.2fr 1fr 1.4fr;gap:18px 28px;padding:22px 0 6px}
+.site-footer .brand{margin-bottom:.2em;font-size:1.15rem}
+.site-footer h4{margin:0 0 .35em}
+.site-footer a{padding:.08em 0;font-size:.88rem;line-height:1.45}
+.site-footer p,.site-footer .foot-tag{font-size:.86rem;margin:.2em 0 0;line-height:1.45}
+.site-footer .fine{padding:10px 0 22px;font-size:.8rem}
+@media(max-width:900px){.site-footer .cols{grid-template-columns:1fr 1fr;gap:14px 22px;padding:18px 0 4px}}
+@media(max-width:560px){.site-footer .cols{grid-template-columns:1fr}}
