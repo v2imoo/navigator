@@ -1,4 +1,3 @@
-Unzip, then upload these INTO your repo's site/ folder (drag the items, not a wrapper):
-  assets/   (current styles.css + js — includes the 3 new tools' code)
-  tools/    (updated hub + 3 new tool pages)
-GitHub: repo -> site -> Add file -> Upload files -> drag assets + tools -> Commit. Hard-refresh.
+Unzip, then upload INTO your repo's site/ folder: the 'ai' folder (updated AI pages)
+and the 'assets' folder (current styles.css + js). GitHub: repo -> site -> Add file ->
+Upload files -> drag 'ai' and 'assets' -> Commit -> hard-refresh.
