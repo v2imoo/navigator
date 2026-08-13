@@ -1,3 +1,3 @@
-Unzip, then upload INTO your repo's site/ folder: the 'ai' folder (updated AI pages)
-and the 'assets' folder (current styles.css + js). GitHub: repo -> site -> Add file ->
-Upload files -> drag 'ai' and 'assets' -> Commit -> hard-refresh.
+Unzip, then upload INTO your repo's site/ folder: the 'moats' folder (7 new deep pages
++ index) and the 'assets' folder (current styles.css + js).
+GitHub: repo -> site -> Add file -> Upload files -> drag 'moats' and 'assets' -> Commit -> hard-refresh.
