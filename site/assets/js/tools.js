@@ -367,3 +367,64 @@ window.initModelFinder=function(root){
   }
   document.getElementById('mf-q').addEventListener('input',go);
 };
+
+/* ===== Cost-Benefit Calculator ===== */
+window.initCostBenefit=function(root){
+  var el=document.getElementById(root); if(!el) return;
+  el.innerHTML='<div class="tool-box"><div class="grid c2">'
+   +'<div><label>Benefits (label = value, one per line)</label><textarea id="cb-b" rows="5" placeholder="New revenue = 120000\nTime saved = 30000"></textarea></div>'
+   +'<div><label>Costs (label = value, one per line)</label><textarea id="cb-c" rows="5" placeholder="Software = 40000\nTraining = 15000"></textarea></div>'
+   +'</div><button class="btn cb-go" style="margin-top:10px">Calculate</button><div id="cb-out" class="result" style="margin-top:14px;display:none"></div></div>';
+  function parse(id){var t=(document.getElementById(id).value||'').split('\n');var tot=0,rows=[];
+    t.forEach(function(l){var m=l.split('=');if(m.length<2)return;var v=parseFloat(m[1].replace(/[^0-9.\-]/g,''));if(isNaN(v))return;rows.push([m[0].trim(),v]);tot+=v;});return {tot:tot,rows:rows};}
+  el.querySelector('.cb-go').addEventListener('click',function(){
+    var B=parse('cb-b'),C=parse('cb-c');var net=B.tot-C.tot;var ratio=C.tot?B.tot/C.tot:0;
+    var col=net>=0?'#2F9E6E':'#D9695A';
+    var out=document.getElementById('cb-out');out.style.display='';
+    out.innerHTML='<div style="font-size:1.1rem"><strong>Net benefit: <span style="color:'+col+'">'+(net>=0?'+':'')+Math.round(net).toLocaleString()+'</span></strong></div>'
+      +'<p class="count-note">Total benefits '+Math.round(B.tot).toLocaleString()+' &minus; total costs '+Math.round(C.tot).toLocaleString()
+      +' &middot; benefit-to-cost ratio '+(ratio?ratio.toFixed(2):'—')+'</p>'
+      +'<p>'+(net>=0?'The numbers favour going ahead. Now pressure-test the assumptions behind your biggest benefit line.':'The costs outweigh the measured benefits. Either the benefits are undercounted or this isn\'t worth it &mdash; check which before proceeding.')+'</p>';
+  });
+};
+
+/* ===== Unit-Economics Calculator ===== */
+window.initUnitEconomics=function(root){
+  var el=document.getElementById(root); if(!el) return;
+  el.innerHTML='<div class="tool-box">'
+   +'<div class="trow"><label>Revenue per customer / month ($) </label><input id="ue-arpu" type="number" value="100"></div>'
+   +'<div class="trow"><label>Gross margin (%) </label><input id="ue-gm" type="number" value="80"></div>'
+   +'<div class="trow"><label>Monthly churn (%) </label><input id="ue-ch" type="number" value="5"></div>'
+   +'<div class="trow"><label>Customer acquisition cost ($) </label><input id="ue-cac" type="number" value="400"></div>'
+   +'<button class="btn ue-go" style="margin-top:10px">Calculate</button><div id="ue-out" class="result" style="margin-top:14px;display:none"></div></div>';
+  el.querySelector('.ue-go').addEventListener('click',function(){
+    var arpu=+document.getElementById('ue-arpu').value, gm=+document.getElementById('ue-gm').value/100,
+        ch=+document.getElementById('ue-ch').value/100, cac=+document.getElementById('ue-cac').value;
+    var mgm=arpu*gm; var ltv=ch>0?mgm/ch:0; var ratio=cac>0?ltv/cac:0; var payback=mgm>0?cac/mgm:0;
+    var verdict = ratio>=3 ? ['Healthy','#2F9E6E'] : ratio>=1 ? ['Marginal','#C07C3E'] : ['Unsustainable','#D9695A'];
+    var out=document.getElementById('ue-out');out.style.display='';
+    out.innerHTML='<div style="font-size:1.1rem"><strong>LTV:CAC = <span style="color:'+verdict[1]+'">'+ratio.toFixed(1)+'</span> &middot; '+verdict[0]+'</strong></div>'
+      +'<p class="count-note">Lifetime value ≈ $'+Math.round(ltv).toLocaleString()+' &middot; CAC payback ≈ '+payback.toFixed(1)+' months &middot; avg lifetime ≈ '+(ch>0?(1/ch).toFixed(1):'∞')+' months</p>'
+      +'<p>'+(ratio>=3?'Rule of thumb: 3:1 or better is healthy. You can likely spend more to grow.':ratio>=1?'You recover CAC but the margin for growth is thin &mdash; lower CAC or raise retention.':'You lose money per customer. Fix churn or CAC before scaling spend.')+'</p>';
+  });
+};
+
+/* ===== Scenario Planner ===== */
+window.initScenario=function(root){
+  var el=document.getElementById(root); if(!el) return;
+  el.innerHTML='<div class="tool-box"><p class="count-note">Estimate an outcome across three scenarios. Probabilities should sum to ~100%.</p>'
+   +'<div class="trow"><label style="width:90px">Worst</label> value <input id="sc-wv" type="number" value="-20000" style="max-width:120px"> prob% <input id="sc-wp" type="number" value="20" style="max-width:80px"></div>'
+   +'<div class="trow"><label style="width:90px">Base</label> value <input id="sc-bv" type="number" value="50000" style="max-width:120px"> prob% <input id="sc-bp" type="number" value="55" style="max-width:80px"></div>'
+   +'<div class="trow"><label style="width:90px">Best</label> value <input id="sc-tv" type="number" value="150000" style="max-width:120px"> prob% <input id="sc-tp" type="number" value="25" style="max-width:80px"></div>'
+   +'<button class="btn sc-go" style="margin-top:10px">Calculate</button><div id="sc-out" class="result" style="margin-top:14px;display:none"></div></div>';
+  el.querySelector('.sc-go').addEventListener('click',function(){
+    var wv=+document.getElementById('sc-wv').value,wp=+document.getElementById('sc-wp').value/100;
+    var bv=+document.getElementById('sc-bv').value,bp=+document.getElementById('sc-bp').value/100;
+    var tv=+document.getElementById('sc-tv').value,tp=+document.getElementById('sc-tp').value/100;
+    var psum=wp+bp+tp; var ev=wv*wp+bv*bp+tv*tp;
+    var out=document.getElementById('sc-out');out.style.display='';
+    out.innerHTML='<div style="font-size:1.1rem"><strong>Expected value ≈ <span style="color:var(--sea)">'+(ev>=0?'+':'')+Math.round(ev).toLocaleString()+'</span></strong></div>'
+      +'<p class="count-note">Range '+Math.round(wv).toLocaleString()+' to '+Math.round(tv).toLocaleString()+(Math.abs(psum-1)>0.02?' &middot; ⚠ probabilities sum to '+Math.round(psum*100)+'%':'')+'</p>'
+      +'<p>Expected value tells you the average bet; the <em>worst case</em> tells you whether you can afford to be wrong. Never take a positive-EV bet whose worst case you can\'t survive.</p>';
+  });
+};
