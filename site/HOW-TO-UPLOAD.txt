@@ -1,0 +1,10 @@
+SELF-CONTAINED UPDATE — unzip, then upload ALL these items INTO your repo's site/ folder:
+  assets/     (contains the current styles.css + js — fixes styling on every page)
+  index.html
+  people/     (new index + 5 new profiles)
+  businesses/ (new index + 2 new profiles)
+GitHub: repo -> open 'site' -> Add file -> Upload files -> drag the extracted
+items (assets, index.html, people, businesses) -> Commit. They merge in.
+Do NOT drag a folder named 'update' — drag the items INSIDE it, so paths stay
+site/assets/..., site/people/..., etc.
+Hard-refresh after deploy (Ctrl/Cmd+Shift+R).
