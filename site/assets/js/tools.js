@@ -428,3 +428,92 @@ window.initScenario=function(root){
       +'<p>Expected value tells you the average bet; the <em>worst case</em> tells you whether you can afford to be wrong. Never take a positive-EV bet whose worst case you can\'t survive.</p>';
   });
 };
+
+/* ===== Porter's Five Forces Analyzer ===== */
+window.initFiveForces=function(root){
+  var el=document.getElementById(root); if(!el) return;
+  var F=[["Competitive rivalry","How intense is head-to-head competition?"],
+   ["Threat of new entrants","How easily can new competitors enter?"],
+   ["Supplier power","How much leverage do your suppliers hold?"],
+   ["Buyer power","How much leverage do your customers hold?"],
+   ["Threat of substitutes","How easily can buyers switch to an alternative?"]];
+  el.innerHTML='<div class="tool-box">'+F.map(function(f,i){
+    return '<div class="trow" style="justify-content:space-between"><label style="margin:0">'+f[0]+'<br><span class="count-note">'+f[1]+'</span></label>'
+      +'<span><input type="range" id="ff'+i+'" min="1" max="10" value="5" oninput="document.getElementById(\'ffv'+i+'\').textContent=this.value"> <b id="ffv'+i+'">5</b>/10</span></div>';}).join('')
+    +'<button class="btn ff-go" style="margin-top:10px">Analyse</button><div id="ff-out" class="result" style="margin-top:14px;display:none"></div></div>';
+  el.querySelector('.ff-go').addEventListener('click',function(){
+    var vals=F.map(function(_,i){return +document.getElementById('ff'+i).value;});
+    var avg=vals.reduce(function(a,b){return a+b;},0)/5;
+    var attr=11-avg; // low forces => attractive
+    var verdict=attr>=7?['Attractive industry','#2F9E6E']:attr>=4?['Mixed — pick your position','#C07C3E']:['Tough industry','#D9695A'];
+    var strongest=F[vals.indexOf(Math.max.apply(null,vals))][0];
+    var out=document.getElementById('ff-out');out.style.display='';
+    out.innerHTML='<div style="font-size:1.1rem"><strong>Industry attractiveness: <span style="color:'+verdict[1]+'">'+attr.toFixed(1)+'/10 — '+verdict[0]+'</span></strong></div>'
+      +'<p class="count-note">'+F.map(function(f,i){return f[0]+': '+vals[i];}).join(' &middot; ')+'</p>'
+      +'<p>Your biggest pressure is <strong>'+strongest+'</strong>. High forces compress profits &mdash; strategy is about finding or building the position where they bite least. Pair with the <a href="/moats/">7 Powers</a> to turn a defensible position into a durable one.</p>';
+  });
+};
+
+/* ===== Business Model Canvas ===== */
+window.initBMC=function(root){
+  var el=document.getElementById(root); if(!el) return;
+  var B=[["kp","Key Partners"],["ka","Key Activities"],["kr","Key Resources"],["vp","Value Propositions"],
+   ["cr","Customer Relationships"],["ch","Channels"],["cs","Customer Segments"],["co","Cost Structure"],["rs","Revenue Streams"]];
+  el.innerHTML='<div class="tool-box"><div class="grid c3">'+B.map(function(b){
+    return '<div><label>'+b[1]+'</label><textarea id="bmc-'+b[0]+'" rows="3"></textarea></div>';}).join('')+'</div>'
+    +'<button class="btn bmc-go" style="margin-top:10px">Build canvas</button> <button class="btn ghost bmc-csv">\u2b07 Download (CSV)</button>'
+    +'<div id="bmc-out" style="margin-top:14px"></div></div>';
+  el.querySelector('.bmc-go').addEventListener('click',function(){
+    var h='<table class="raci"><tr>'+B.map(function(b){return '<th>'+b[1]+'</th>';}).slice(0,3).join('')+'</tr>';
+    // render as three rows of three for readability
+    for(var r=0;r<3;r++){h+='<tr>';for(var c=0;c<3;c++){var b=B[r*3+c];var v=(document.getElementById('bmc-'+b[0]).value||'').replace(/</g,'&lt;').replace(/\n/g,'<br>');h+='<td style="text-align:left;vertical-align:top"><strong>'+b[1]+'</strong><br>'+v+'</td>';}h+='</tr>';}
+    h+='</table>';document.getElementById('bmc-out').innerHTML=h;
+  });
+  el.querySelector('.bmc-csv').addEventListener('click',function(){
+    var rows=B.map(function(b){return '"'+b[1]+'","'+(document.getElementById('bmc-'+b[0]).value||'').replace(/"/g,'""')+'"';});
+    var a=document.createElement('a');a.download='business-model-canvas.csv';a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(rows.join('\n'));a.click();
+  });
+};
+
+/* ===== Pre-Mortem Worksheet ===== */
+window.initPreMortem=function(root){
+  var el=document.getElementById(root); if(!el) return;
+  el.innerHTML='<div class="tool-box"><label>The plan / decision</label><input id="pm-plan" placeholder="e.g. Launch the new pricing tier in Q3">'
+   +'<p class="count-note" style="margin-top:10px">Imagine it is a year from now and it <strong>failed</strong>. List the reasons it failed (one per line):</p>'
+   +'<textarea id="pm-reasons" rows="5" placeholder="Customers didn\'t understand the value\nSales team wasn\'t trained\nCompetitor cut prices"></textarea>'
+   +'<button class="btn pm-go" style="margin-top:10px">Build risk table</button> <button class="btn ghost pm-csv">\u2b07 CSV</button>'
+   +'<div id="pm-out" style="margin-top:14px"></div></div>';
+  el.querySelector('.pm-go').addEventListener('click',function(){
+    var rs=(document.getElementById('pm-reasons').value||'').split('\n').map(function(s){return s.trim();}).filter(Boolean);
+    var h='<table class="raci"><tr><th>Failure reason</th><th>Likelihood</th><th>Mitigation (write now)</th></tr>';
+    rs.forEach(function(r,i){h+='<tr><td style="text-align:left">'+r.replace(/</g,'&lt;')+'</td>'
+      +'<td><select id="pm-l'+i+'"><option>Low</option><option selected>Medium</option><option>High</option></select></td>'
+      +'<td><input id="pm-m'+i+'" placeholder="How you\'ll prevent it" style="width:100%"></td></tr>';});
+    h+='</table><p class="count-note">Prioritise the High-likelihood rows: pre-commit to a mitigation before you start.</p>';
+    document.getElementById('pm-out').innerHTML=h; el._rs=rs;
+  });
+  el.querySelector('.pm-csv').addEventListener('click',function(){
+    if(!el._rs)return;var rows=[['Plan',(document.getElementById('pm-plan').value||'')]];rows.push(['Reason','Likelihood','Mitigation']);
+    el._rs.forEach(function(r,i){rows.push([r,(document.getElementById('pm-l'+i)||{}).value||'',(document.getElementById('pm-m'+i)||{}).value||'']);});
+    var csv=rows.map(function(r){return r.map(function(c){return '"'+(c||'').replace(/"/g,'""')+'"';}).join(',');}).join('\n');
+    var a=document.createElement('a');a.download='pre-mortem.csv';a.href='data:text/csv;charset=utf-8,'+encodeURIComponent(csv);a.click();
+  });
+};
+
+/* ===== Second-Order Thinking Mapper ===== */
+window.initSecondOrder=function(root){
+  var el=document.getElementById(root); if(!el) return;
+  el.innerHTML='<div class="tool-box"><label>The decision or action</label><input id="so-act" placeholder="e.g. We cut prices by 20%">'
+   +'<div style="margin-top:10px"><label>Then what happens? (1st-order — immediate)</label><textarea id="so-1" rows="2"></textarea></div>'
+   +'<div><label>And then what? (2nd-order — the consequence of that)</label><textarea id="so-2" rows="2"></textarea></div>'
+   +'<div><label>And then what? (3rd-order — the long game)</label><textarea id="so-3" rows="2"></textarea></div>'
+   +'<button class="btn so-go" style="margin-top:10px">Map the cascade</button><div id="so-out" style="margin-top:14px"></div></div>';
+  el.querySelector('.so-go').addEventListener('click',function(){
+    var act=document.getElementById('so-act').value||'The action';
+    var steps=[['Decision',act,'#0C5460'],['1st order',document.getElementById('so-1').value,'#0E7C8C'],
+      ['2nd order',document.getElementById('so-2').value,'#C07C3E'],['3rd order',document.getElementById('so-3').value,'#D9695A']];
+    var h=steps.filter(function(s){return s[1];}).map(function(s){
+      return '<div style="border-left:3px solid '+s[2]+';padding:4px 0 4px 12px;margin:8px 0"><span class="count-note" style="color:'+s[2]+'">'+s[0]+'</span><br>'+s[1].replace(/</g,'&lt;')+'</div>';}).join('');
+    document.getElementById('so-out').innerHTML=h+'<p class="count-note">Most people stop at the 1st order. The edge is in the 2nd and 3rd &mdash; the effects of the effects. If the later orders reverse the early win, reconsider.</p>';
+  });
+};
