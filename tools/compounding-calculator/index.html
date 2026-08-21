@@ -1,0 +1,106 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compounding Calculator &middot; Navigator</title>
+<meta name="description" content="See how money grows when returns build on themselves over time.">
+<link rel="canonical" href="https://navigator.blog/tools/compounding-calculator/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="Vijay"><meta name="theme-color" content="#C2410C">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Navigator">
+<meta property="og:title" content="Compounding Calculator"><meta property="og:description" content="See how money grows when returns build on themselves over time.">
+<meta property="og:url" content="https://navigator.blog/tools/compounding-calculator/"><meta property="og:image" content="https://navigator.blog/assets/img/og.svg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Compounding Calculator">
+<meta name="twitter:description" content="See how money grows when returns build on themselves over time."><meta name="twitter:image" content="https://navigator.blog/assets/img/og.svg">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Compounding Calculator", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "See how money grows when returns build on themselves over time.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://navigator.blog/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://navigator.blog/tools/"}, {"@type": "ListItem", "position": 3, "name": "Compounding Calculator", "item": "https://navigator.blog/tools/compounding-calculator/"}]}</script>
+</head>
+<body data-accent="tools">
+<div class="topbar">A new breakdown every week &mdash; <a href="../../newsletter/">read the newsletter &rarr;</a></div>
+<div class="spectrum-rule"></div>
+<header class="site-header"><div class="wrap nav">
+<a class="brand" href="../../"><span class="theta">&#920;</span>&nbsp;NAVIGATOR</a>
+<nav class="nav-links" aria-label="Primary">
+<a href="../../people/">People</a><a href="../../businesses/">Businesses</a>
+<div class="drop"><button aria-haspopup="true">Strategies &#9662;</button><div class="drop-menu">
+<a href="../../mental-models/">Mental Models</a><a href="../../decision-tools/">Decision Tools</a>
+<a href="../../business-models/">Business Models</a><a href="../../frameworks/">Frameworks</a><a href="../../moats/">Moats</a></div></div>
+<div class="drop"><button aria-haspopup="true">Learn &#9662;</button><div class="drop-menu">
+<a href="../../books/">Book Summaries</a><a href="../../reading-lists/">Reading Lists</a>
+<a href="../../guides/">Guides</a><a href="../../quotes/">Quote Collections</a><a href="../../paths/">Learning Paths</a></div></div>
+<a href="../../tools/">Tools</a><a href="../../ai/">AI</a><a href="../../about/">About</a></nav>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+</div></header>
+<div class="drawer" id="drawer"><div class="drawer-panel">
+<button class="drawer-close" data-close aria-label="Close menu">&times;</button>
+<a href="../../people/">People</a><a href="../../businesses/">Businesses</a><a href="../../tools/">Tools</a>
+<details class="drawer-group" open><summary>Strategies</summary>
+<a href="../../mental-models/">Mental Models</a><a href="../../decision-tools/">Decision Tools</a>
+<a href="../../business-models/">Business Models</a><a href="../../frameworks/">Frameworks</a><a href="../../moats/">Moats</a></details>
+<details class="drawer-group"><summary>Learn</summary>
+<a href="../../books/">Book Summaries</a><a href="../../reading-lists/">Reading Lists</a>
+<a href="../../guides/">Guides</a><a href="../../quotes/">Quote Collections</a><a href="../../paths/">Learning Paths</a></details>
+<a href="../../ai/">Artificial Intelligence</a><a href="../../newsletter/">Newsletter</a>
+<a href="../../about/">About</a><a href="../../contact/">Contact</a>
+<button class="btn ghost" id="a11yToggle" style="margin-top:14px">Aa Readable font</button>
+</div></div>
+<div class="head-band"><div class="wrap">
+<nav class="crumbs"><a href="../../">Home</a> &rsaquo; <a href="../../tools/">Tools</a> &rsaquo; Compounding Calculator</nav>
+<span class="eyebrow">Finance tool</span><h1>Compounding Calculator</h1>
+<p class="lede">See how money grows when returns build on themselves over time.</p></div></div>
+<div class="wrap"><div class="article">
+<nav class="toc" aria-label="Contents"><div class="toc-h">Contents</div><div id="toc"></div></nav>
+<article class="doc">
+<h2>About this tool</h2><p>Enter a starting amount, an annual return, a monthly contribution, and a time horizon to see the power of compounding — and how much of the final total comes from growth rather than what you put in.</p><p>This tool puts a concept into practice. Read the idea behind it: <a href="../../mental-models/compounding/">Compounding</a>.</p>
+<h2>The tool</h2>
+
+<div class="tool" style="border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--card)">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px">
+<label>Starting amount<br><input id="cc_p" type="number" value="1000" style="width:100%"></label>
+<label>Annual return %<br><input id="cc_r" type="number" value="8" style="width:100%"></label>
+<label>Monthly contribution<br><input id="cc_m" type="number" value="200" style="width:100%"></label>
+<label>Years<br><input id="cc_y" type="number" value="30" style="width:100%"></label>
+</div>
+<div id="cc_out" style="margin-top:18px"></div>
+<svg id="cc_chart" viewBox="0 0 600 160" style="width:100%;height:160px;margin-top:12px"></svg>
+</div>
+<script>
+(function(){
+var ids=['cc_p','cc_r','cc_m','cc_y'].map(function(i){return document.getElementById(i)});
+function fmt(n){return '$'+Math.round(n).toLocaleString()}
+function calc(){
+ var p=+ids[0].value||0,r=(+ids[1].value||0)/100,m=+ids[2].value||0,y=+ids[3].value||0;
+ var bal=p,contrib=p,series=[p];
+ for(var i=1;i<=y;i++){for(var k=0;k<12;k++){bal=bal*(1+r/12)+m;contrib+=m;}series.push(bal);}
+ var growth=bal-contrib;
+ document.getElementById('cc_out').innerHTML=
+  '<div class="stats-grid"><div class="stat"><div class="num">'+fmt(bal)+'</div><div class="lbl">Final balance</div></div>'+
+  '<div class="stat"><div class="num">'+fmt(contrib)+'</div><div class="lbl">You contributed</div></div>'+
+  '<div class="stat"><div class="num">'+fmt(growth)+'</div><div class="lbl">Growth (compounding)</div></div></div>';
+ // chart
+ var w=600,h=160,max=Math.max.apply(null,series)||1,n=series.length,bw=w/n;
+ var bars=series.map(function(v,i){var bh=(v/max)*(h-20);
+  return '<rect x="'+(i*bw)+'" y="'+(h-bh)+'" width="'+(bw*0.8)+'" height="'+bh+'" fill="var(--accent)" opacity="'+(0.4+0.6*i/n)+'"></rect>';}).join('');
+ document.getElementById('cc_chart').innerHTML=bars;
+}
+ids.forEach(function(el){el.addEventListener('input',calc)});calc();
+})();
+</script>
+</article>
+<aside class="infobox"><div class="ib-top"></div>
+<div class="portrait mono">&#9881;</div>
+<div class="ib-body"><p class="ib-name">Compounding Calculator</p><p class="ib-tag">Finance tool</p>
+<div class="ib-row"><span class="ib-k">Type</span><span class="ib-v">Interactive</span></div>
+<div class="ib-row"><span class="ib-k">Data</span><span class="ib-v">Stays in your browser</span></div></div></aside>
+</div></div>
+<footer class="site-footer"><div class="spectrum-rule"></div><div class="wrap">
+<div class="foot"><div class="fbrand"><a class="brand" href="../../"><span class="theta">&#920;</span>&nbsp;NAVIGATOR</a>
+<p>An open reference for how the greatest people and companies think, build, and decide. Free, no login.</p></div>
+<div><h4>Libraries</h4><a href="../../people/">People</a><a href="../../businesses/">Businesses</a><a href="../../mental-models/">Mental Models</a><a href="../../decision-tools/">Decision Tools</a><a href="../../business-models/">Business Models</a></div><div><h4>Learn</h4><a href="../../books/">Books</a><a href="../../reading-lists/">Reading Lists</a><a href="../../guides/">Guides</a><a href="../../quotes/">Quotes</a><a href="../../paths/">Learning Paths</a></div><div><h4>Apply</h4><a href="../../tools/">Tools</a><a href="../../frameworks/">Frameworks</a><a href="../../moats/">Moats</a><a href="../../ai/">AI</a><a href="../../recommend/">What to study</a></div><div><h4>Site</h4><a href="../../about/">About</a><a href="../../newsletter/">Newsletter</a><a href="../../contact/">Contact</a><a href="../../search/">Search</a><a href="../../credits/">Credits</a></div></div>
+<div class="foot-legal"><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a><a href="../../cookies/">Cookies</a><a href="../../refund/">Refund</a><a href="../../accessibility/">Accessibility</a><a href="../../disclaimer/">Disclaimer</a><span class="sp">&copy; 2026 Navigator</span></div>
+</div></footer>
+<script src="../../assets/js/main.js" defer></script>
+<script src="../../assets/js/wiki.js" defer></script>
+</body></html>

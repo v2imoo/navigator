@@ -1,0 +1,111 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expected Value Calculator &middot; Navigator</title>
+<meta name="description" content="Weigh uncertain outcomes by their probability to find the rational choice.">
+<link rel="canonical" href="https://navigator.blog/tools/expected-value-calculator/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="Vijay"><meta name="theme-color" content="#C2410C">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Navigator">
+<meta property="og:title" content="Expected Value Calculator"><meta property="og:description" content="Weigh uncertain outcomes by their probability to find the rational choice.">
+<meta property="og:url" content="https://navigator.blog/tools/expected-value-calculator/"><meta property="og:image" content="https://navigator.blog/assets/img/og.svg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Expected Value Calculator">
+<meta name="twitter:description" content="Weigh uncertain outcomes by their probability to find the rational choice."><meta name="twitter:image" content="https://navigator.blog/assets/img/og.svg">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Expected Value Calculator", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "Weigh uncertain outcomes by their probability to find the rational choice.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://navigator.blog/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://navigator.blog/tools/"}, {"@type": "ListItem", "position": 3, "name": "Expected Value Calculator", "item": "https://navigator.blog/tools/expected-value-calculator/"}]}</script>
+</head>
+<body data-accent="tools">
+<div class="topbar">A new breakdown every week &mdash; <a href="../../newsletter/">read the newsletter &rarr;</a></div>
+<div class="spectrum-rule"></div>
+<header class="site-header"><div class="wrap nav">
+<a class="brand" href="../../"><span class="theta">&#920;</span>&nbsp;NAVIGATOR</a>
+<nav class="nav-links" aria-label="Primary">
+<a href="../../people/">People</a><a href="../../businesses/">Businesses</a>
+<div class="drop"><button aria-haspopup="true">Strategies &#9662;</button><div class="drop-menu">
+<a href="../../mental-models/">Mental Models</a><a href="../../decision-tools/">Decision Tools</a>
+<a href="../../business-models/">Business Models</a><a href="../../frameworks/">Frameworks</a><a href="../../moats/">Moats</a></div></div>
+<div class="drop"><button aria-haspopup="true">Learn &#9662;</button><div class="drop-menu">
+<a href="../../books/">Book Summaries</a><a href="../../reading-lists/">Reading Lists</a>
+<a href="../../guides/">Guides</a><a href="../../quotes/">Quote Collections</a><a href="../../paths/">Learning Paths</a></div></div>
+<a href="../../tools/">Tools</a><a href="../../ai/">AI</a><a href="../../about/">About</a></nav>
+<button class="menu-btn" id="menuBtn" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+</div></header>
+<div class="drawer" id="drawer"><div class="drawer-panel">
+<button class="drawer-close" data-close aria-label="Close menu">&times;</button>
+<a href="../../people/">People</a><a href="../../businesses/">Businesses</a><a href="../../tools/">Tools</a>
+<details class="drawer-group" open><summary>Strategies</summary>
+<a href="../../mental-models/">Mental Models</a><a href="../../decision-tools/">Decision Tools</a>
+<a href="../../business-models/">Business Models</a><a href="../../frameworks/">Frameworks</a><a href="../../moats/">Moats</a></details>
+<details class="drawer-group"><summary>Learn</summary>
+<a href="../../books/">Book Summaries</a><a href="../../reading-lists/">Reading Lists</a>
+<a href="../../guides/">Guides</a><a href="../../quotes/">Quote Collections</a><a href="../../paths/">Learning Paths</a></details>
+<a href="../../ai/">Artificial Intelligence</a><a href="../../newsletter/">Newsletter</a>
+<a href="../../about/">About</a><a href="../../contact/">Contact</a>
+<button class="btn ghost" id="a11yToggle" style="margin-top:14px">Aa Readable font</button>
+</div></div>
+<div class="head-band"><div class="wrap">
+<nav class="crumbs"><a href="../../">Home</a> &rsaquo; <a href="../../tools/">Tools</a> &rsaquo; Expected Value Calculator</nav>
+<span class="eyebrow">Decision making tool</span><h1>Expected Value Calculator</h1>
+<p class="lede">Weigh uncertain outcomes by their probability to find the rational choice.</p></div></div>
+<div class="wrap"><div class="article">
+<nav class="toc" aria-label="Contents"><div class="toc-h">Contents</div><div id="toc"></div></nav>
+<article class="doc">
+<h2>About this tool</h2><p>List the possible outcomes of a decision, each with a probability and a value (positive or negative). The tool computes the expected value — the probability-weighted average — so you can compare risky options on a common footing.</p><p>This tool puts a concept into practice. Read the idea behind it: <a href="../../mental-models/base-rates/">Base Rates</a>.</p>
+<h2>The tool</h2>
+
+<div class="tool" style="border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--card)">
+<table id="ev_t" style="width:100%;border-collapse:collapse;font-size:.92rem">
+<tr><th style="text-align:left;padding:6px">Outcome</th><th style="padding:6px">Probability %</th><th style="padding:6px">Value</th><th></th></tr>
+</table>
+<button class="btn ghost" id="ev_add" style="margin-top:10px">+ Outcome</button>
+<div id="ev_out" style="margin-top:16px"></div>
+</div>
+<script>
+(function(){
+var rows=[{n:'Success',p:60,v:1000},{n:'Failure',p:40,v:-500}];
+function render(){
+ var t=document.getElementById('ev_t');
+ [].slice.call(t.querySelectorAll('tr.r')).forEach(function(e){e.remove()});
+ rows.forEach(function(r,i){var tr=document.createElement('tr');tr.className='r';
+  tr.innerHTML='<td style="padding:6px"><input value="'+r.n+'" data-n="'+i+'" style="width:120px"></td>'+
+   '<td style="padding:6px;text-align:center"><input type="number" value="'+r.p+'" data-p="'+i+'" style="width:64px"></td>'+
+   '<td style="padding:6px;text-align:center"><input type="number" value="'+r.v+'" data-v="'+i+'" style="width:84px"></td>'+
+   '<td style="padding:6px"><button data-x="'+i+'" style="border:0;background:none;cursor:pointer;color:var(--ink-mute)">&times;</button></td>';
+  t.appendChild(tr);});
+ bind();calc();
+}
+function bind(){
+ document.querySelectorAll('[data-n]').forEach(function(e){e.oninput=function(){rows[+e.dataset.n].n=e.value;}});
+ document.querySelectorAll('[data-p]').forEach(function(e){e.oninput=function(){rows[+e.dataset.p].p=+e.value;calc();}});
+ document.querySelectorAll('[data-v]').forEach(function(e){e.oninput=function(){rows[+e.dataset.v].v=+e.value;calc();}});
+ document.querySelectorAll('[data-x]').forEach(function(e){e.onclick=function(){rows.splice(+e.dataset.x,1);render();}});
+}
+function calc(){
+ var ev=0,psum=0;rows.forEach(function(r){ev+=(r.p/100)*r.v;psum+=r.p;});
+ var warn=Math.abs(psum-100)>0.5?'<br><small style="color:var(--accent-ink)">Probabilities sum to '+psum+'% \u2014 they should total 100%.</small>':'';
+ document.getElementById('ev_out').innerHTML='<div class="tactic"><b>Expected value:</b> '+
+  (ev>=0?'+':'')+Math.round(ev).toLocaleString()+warn+'</div>';
+}
+document.getElementById('ev_add').onclick=function(){rows.push({n:'Outcome',p:0,v:0});render();};
+render();
+})();
+</script>
+</article>
+<aside class="infobox"><div class="ib-top"></div>
+<div class="portrait mono">&#9881;</div>
+<div class="ib-body"><p class="ib-name">Expected Value Calculator</p><p class="ib-tag">Decision making tool</p>
+<div class="ib-row"><span class="ib-k">Type</span><span class="ib-v">Interactive</span></div>
+<div class="ib-row"><span class="ib-k">Data</span><span class="ib-v">Stays in your browser</span></div></div></aside>
+</div></div>
+<footer class="site-footer"><div class="spectrum-rule"></div><div class="wrap">
+<div class="foot"><div class="fbrand"><a class="brand" href="../../"><span class="theta">&#920;</span>&nbsp;NAVIGATOR</a>
+<p>An open reference for how the greatest people and companies think, build, and decide. Free, no login.</p></div>
+<div><h4>Libraries</h4><a href="../../people/">People</a><a href="../../businesses/">Businesses</a><a href="../../mental-models/">Mental Models</a><a href="../../decision-tools/">Decision Tools</a><a href="../../business-models/">Business Models</a></div><div><h4>Learn</h4><a href="../../books/">Books</a><a href="../../reading-lists/">Reading Lists</a><a href="../../guides/">Guides</a><a href="../../quotes/">Quotes</a><a href="../../paths/">Learning Paths</a></div><div><h4>Apply</h4><a href="../../tools/">Tools</a><a href="../../frameworks/">Frameworks</a><a href="../../moats/">Moats</a><a href="../../ai/">AI</a><a href="../../recommend/">What to study</a></div><div><h4>Site</h4><a href="../../about/">About</a><a href="../../newsletter/">Newsletter</a><a href="../../contact/">Contact</a><a href="../../search/">Search</a><a href="../../credits/">Credits</a></div></div>
+<div class="foot-legal"><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a><a href="../../cookies/">Cookies</a><a href="../../refund/">Refund</a><a href="../../accessibility/">Accessibility</a><a href="../../disclaimer/">Disclaimer</a><span class="sp">&copy; 2026 Navigator</span></div>
+</div></footer>
+<script src="../../assets/js/main.js" defer></script>
+<script src="../../assets/js/wiki.js" defer></script>
+</body></html>
