@@ -1,60 +1,36 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Decision Matrix &middot; Navigator</title>
-<meta name="description" content="Score your options against weighted criteria and let the arithmetic pick.">
+<meta name="description" content="List your options and the criteria that matter, weight each criterion, then score every option. The matrix multiplies through and ranks them.">
 <link rel="canonical" href="https://navigator.blog/tools/decision-matrix-tool/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="author" content="Vijay"><meta name="theme-color" content="#C2410C">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Navigator">
-<meta property="og:title" content="Decision Matrix"><meta property="og:description" content="Score your options against weighted criteria and let the arithmetic pick.">
+<meta property="og:title" content="Decision Matrix"><meta property="og:description" content="List your options and the criteria that matter, weight each criterion, then score every option. The matrix multiplies through and ranks them.">
 <meta property="og:url" content="https://navigator.blog/tools/decision-matrix-tool/"><meta property="og:image" content="https://navigator.blog/assets/img/og.svg">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Decision Matrix">
-<meta name="twitter:description" content="Score your options against weighted criteria and let the arithmetic pick."><meta name="twitter:image" content="https://navigator.blog/assets/img/og.svg">
+<meta name="twitter:description" content="List your options and the criteria that matter, weight each criterion, then score every option. The matrix multiplies through and ranks them."><meta name="twitter:image" content="https://navigator.blog/assets/img/og.svg">
 <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/styles.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Decision Matrix", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "Score your options against weighted criteria and let the arithmetic pick.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<link rel="stylesheet" href="../../assets/css/tools.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Decision Matrix", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "List your options and the criteria that matter, weight each criterion, then score every option. The matrix multiplies through and ranks them.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://navigator.blog/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://navigator.blog/tools/"}, {"@type": "ListItem", "position": 3, "name": "Decision Matrix", "item": "https://navigator.blog/tools/decision-matrix-tool/"}]}</script>
 </head>
-<body data-accent="tools">
-<div class="topbar">A new breakdown every week &mdash; <a href="../../newsletter/">read the newsletter &rarr;</a></div>
-<div class="spectrum-rule"></div>
-<header class="site-header"><div class="wrap nav">
-<a class="brand" href="../../"><span class="theta">&#920;</span>&nbsp;NAVIGATOR</a>
-<nav class="nav-links" aria-label="Primary">
-<a href="../../people/">People</a><a href="../../businesses/">Businesses</a>
-<div class="drop"><button aria-haspopup="true">Strategies &#9662;</button><div class="drop-menu">
-<a href="../../mental-models/">Mental Models</a><a href="../../decision-tools/">Decision Tools</a>
-<a href="../../business-models/">Business Models</a><a href="../../frameworks/">Frameworks</a><a href="../../moats/">Moats</a></div></div>
-<div class="drop"><button aria-haspopup="true">Learn &#9662;</button><div class="drop-menu">
-<a href="../../books/">Book Summaries</a><a href="../../reading-lists/">Reading Lists</a>
-<a href="../../guides/">Guides</a><a href="../../quotes/">Quote Collections</a><a href="../../paths/">Learning Paths</a></div></div>
-<a href="../../tools/">Tools</a><a href="../../ai/">AI</a><a href="../../about/">About</a></nav>
-<button class="menu-btn" id="menuBtn" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-</div></header>
-<div class="drawer" id="drawer"><div class="drawer-panel">
-<button class="drawer-close" data-close aria-label="Close menu">&times;</button>
-<a href="../../people/">People</a><a href="../../businesses/">Businesses</a><a href="../../tools/">Tools</a>
-<details class="drawer-group" open><summary>Strategies</summary>
-<a href="../../mental-models/">Mental Models</a><a href="../../decision-tools/">Decision Tools</a>
-<a href="../../business-models/">Business Models</a><a href="../../frameworks/">Frameworks</a><a href="../../moats/">Moats</a></details>
-<details class="drawer-group"><summary>Learn</summary>
-<a href="../../books/">Book Summaries</a><a href="../../reading-lists/">Reading Lists</a>
-<a href="../../guides/">Guides</a><a href="../../quotes/">Quote Collections</a><a href="../../paths/">Learning Paths</a></details>
-<a href="../../ai/">Artificial Intelligence</a><a href="../../newsletter/">Newsletter</a>
-<a href="../../about/">About</a><a href="../../contact/">Contact</a>
-<button class="btn ghost" id="a11yToggle" style="margin-top:14px">Aa Readable font</button>
-</div></div>
-<div class="head-band"><div class="wrap">
-<nav class="crumbs"><a href="../../">Home</a> &rsaquo; <a href="../../tools/">Tools</a> &rsaquo; Decision Matrix</nav>
-<span class="eyebrow">Decision making tool</span><h1>Decision Matrix</h1>
-<p class="lede">Score your options against weighted criteria and let the arithmetic pick.</p></div></div>
-<div class="wrap"><div class="article">
-<nav class="toc" aria-label="Contents"><div class="toc-h">Contents</div><div id="toc"></div></nav>
-<article class="doc">
-<h2>About this tool</h2><p>List your options and the criteria that matter, weight each criterion, then score every option. The tool multiplies through and ranks them — set the weights before you score to keep yourself honest.</p><p>This tool puts a concept into practice. Read the idea behind it: <a href="../../decision-tools/decision-matrix/">Decision Matrix</a>.</p>
-<h2>The tool</h2>
+<body class="t-console" data-accent="tools">
+
+<div class="t-wrap">
+<div class="t-rail"><span><span class="dot"></span><a href="../../">Navigator</a> &middot; <a href="../../tools/">Decision Tools</a></span><span>Model <b>MATRIX-02</b></span></div>
+<div class="t-crumbs"><a href="../../">Home</a> &rsaquo; <a href="../">Tools</a> &rsaquo; Decision Matrix</div>
+<p class="t-eyebrow">Weighted scoring model</p>
+<h1>Decision Matrix</h1>
+<p class="t-lede">List your options and the criteria that matter, weight each criterion, then score every option. The matrix multiplies through and ranks them.</p>
+
+<div class="t-console-frame">
+  <div class="t-console-head"><span>Weighted scoring model</span>
+    <span class="t-lamps"><i class="t-lamp red"></i><i class="t-lamp"></i><i class="t-lamp go"></i></span></div>
+  <div class="t-console-inner">
 
 <div class="tool" style="border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--card)">
 <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">
@@ -97,19 +73,21 @@ document.getElementById('dm_addcrit').onclick=function(){crits.push({n:'New',w:1
 render();
 })();
 </script>
-</article>
-<aside class="infobox"><div class="ib-top"></div>
-<div class="portrait mono">&#9881;</div>
-<div class="ib-body"><p class="ib-name">Decision Matrix</p><p class="ib-tag">Decision making tool</p>
-<div class="ib-row"><span class="ib-k">Type</span><span class="ib-v">Interactive</span></div>
-<div class="ib-row"><span class="ib-k">Data</span><span class="ib-v">Stays in your browser</span></div></div></aside>
-</div></div>
-<footer class="site-footer"><div class="spectrum-rule"></div><div class="wrap">
-<div class="foot"><div class="fbrand"><a class="brand" href="../../"><span class="theta">&#920;</span>&nbsp;NAVIGATOR</a>
-<p>An open reference for how the greatest people and companies think, build, and decide. Free, no login.</p></div>
-<div><h4>Libraries</h4><a href="../../people/">People</a><a href="../../businesses/">Businesses</a><a href="../../mental-models/">Mental Models</a><a href="../../decision-tools/">Decision Tools</a><a href="../../business-models/">Business Models</a></div><div><h4>Learn</h4><a href="../../books/">Books</a><a href="../../reading-lists/">Reading Lists</a><a href="../../guides/">Guides</a><a href="../../quotes/">Quotes</a><a href="../../paths/">Learning Paths</a></div><div><h4>Apply</h4><a href="../../tools/">Tools</a><a href="../../frameworks/">Frameworks</a><a href="../../moats/">Moats</a><a href="../../ai/">AI</a><a href="../../recommend/">What to study</a></div><div><h4>Site</h4><a href="../../about/">About</a><a href="../../newsletter/">Newsletter</a><a href="../../contact/">Contact</a><a href="../../search/">Search</a><a href="../../credits/">Credits</a></div></div>
-<div class="foot-legal"><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a><a href="../../cookies/">Cookies</a><a href="../../refund/">Refund</a><a href="../../accessibility/">Accessibility</a><a href="../../disclaimer/">Disclaimer</a><span class="sp">&copy; 2026 Navigator</span></div>
-</div></footer>
-<script src="../../assets/js/main.js" defer></script>
-<script src="../../assets/js/wiki.js" defer></script>
+  </div>
+</div>
+<div class="t-readline"><span>UNIT <b>MATRIX-02</b></span><span>INPUT &rarr; <b>OUTPUT</b></span><span>LOCAL &middot; <b>NO DATA SENT</b></span></div>
+
+<div class="t-prose">
+<h2><span class="t-h-n">01</span>What it is</h2><p>A decision matrix turns a fuzzy ‘which one feels right’ into an explicit, inspectable calculation. You name the things that actually matter (the criteria), decide how much each one counts (the weights), and rate each option against them. The tool multiplies each score by its weight and sums the result, giving every option a single comparable total.</p><p>Its real value is less the number it produces than the thinking it forces. Setting the weights before you score keeps you honest — you commit to what matters before you know which option it favours, which guards against quietly rigging the criteria to justify a choice you have already made.</p>
+<h2><span class="t-h-n">02</span>How to use it</h2><p>Add your options as rows and your criteria as columns. Give each criterion a weight — higher numbers for the things that matter more. Then score each option against each criterion, typically one to five. The ‘Score’ column updates live, and the winner is called out beneath the table.</p><p>Add or remove options and criteria freely; rename anything by typing over it. There is no right number of criteria, but three to six usually captures what matters without drowning the decision in detail.</p>
+<h2><span class="t-h-n">03</span>Reading the output</h2><p>The totals rank your options, but treat the result as a prompt, not a verdict. If the winner surprises you or sits wrong, that reaction is information: usually it means a criterion is missing or mis-weighted. Adjust the weights openly and see whether the ranking holds — don&#x27;t quietly override the arithmetic to reach a predetermined answer.</p>
+<h2><span class="t-h-n">04</span>When to use it</h2><p>Use it for choices with several real options and several competing considerations — hiring between finalists, picking a vendor or tool, choosing between roles or locations — anywhere ‘it depends’ hides a set of trade-offs you can make explicit.</p>
+<h2><span class="t-h-n">05</span>Worked example</h2><div class="t-example"><div class="t-ex-h">Example run</div><p>Choosing a laptop, you weight cost 5, battery 3 and weight 2. A cheaper model scores well on cost but poorly on battery; a premium one the reverse. Once weighted and summed, the cheaper machine edges ahead — and if that feels wrong, it usually means battery matters more to you than the weight of 3 you gave it.</p></div>
+<h2><span class="t-h-n">06</span>Common pitfalls</h2><ul><li>Scoring before weighting. Decide how much each criterion counts before you rate options, or you&#x27;ll unconsciously weight to fit your favourite.</li><li>Too many criteria. Beyond a handful, minor factors dilute the ones that truly decide the choice.</li><li>False precision. A one-to-five score is a judgement, not a measurement; don&#x27;t trust a two-point gap as if it were exact.</li><li>Overriding the result silently. If the winner feels wrong, fix the inputs in the open rather than ignoring the output.</li></ul>
+<p class="t-concept">Underlying idea: <a href="../../decision-tools/decision-matrix/">Decision Matrix</a> &rsaquo;</p>
+</div>
+<div class="t-foot"><span><a href="../../tools/">&larr; All tools</a></span><span><a href="../../about/">About</a> &middot; <a href="../../search/">Search</a></span><span>&copy; Navigator</span></div>
+</div>
+
+
 </body></html>

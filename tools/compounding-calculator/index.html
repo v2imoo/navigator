@@ -1,60 +1,36 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Compounding Calculator &middot; Navigator</title>
-<meta name="description" content="See how money grows when returns build on themselves over time.">
+<meta name="description" content="Set a starting sum, a rate, a monthly deposit and a horizon. The engine runs the balance forward month by month and separates what you added from what growth added.">
 <link rel="canonical" href="https://navigator.blog/tools/compounding-calculator/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="author" content="Vijay"><meta name="theme-color" content="#C2410C">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Navigator">
-<meta property="og:title" content="Compounding Calculator"><meta property="og:description" content="See how money grows when returns build on themselves over time.">
+<meta property="og:title" content="Compounding Calculator"><meta property="og:description" content="Set a starting sum, a rate, a monthly deposit and a horizon. The engine runs the balance forward month by month and separates what you added from what growth added.">
 <meta property="og:url" content="https://navigator.blog/tools/compounding-calculator/"><meta property="og:image" content="https://navigator.blog/assets/img/og.svg">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Compounding Calculator">
-<meta name="twitter:description" content="See how money grows when returns build on themselves over time."><meta name="twitter:image" content="https://navigator.blog/assets/img/og.svg">
+<meta name="twitter:description" content="Set a starting sum, a rate, a monthly deposit and a horizon. The engine runs the balance forward month by month and separates what you added from what growth added."><meta name="twitter:image" content="https://navigator.blog/assets/img/og.svg">
 <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/styles.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Compounding Calculator", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "See how money grows when returns build on themselves over time.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<link rel="stylesheet" href="../../assets/css/tools.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Compounding Calculator", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "Set a starting sum, a rate, a monthly deposit and a horizon. The engine runs the balance forward month by month and separates what you added from what growth added.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://navigator.blog/"}, {"@type": "ListItem", "position": 2, "name": "Tools", "item": "https://navigator.blog/tools/"}, {"@type": "ListItem", "position": 3, "name": "Compounding Calculator", "item": "https://navigator.blog/tools/compounding-calculator/"}]}</script>
 </head>
-<body data-accent="tools">
-<div class="topbar">A new breakdown every week &mdash; <a href="../../newsletter/">read the newsletter &rarr;</a></div>
-<div class="spectrum-rule"></div>
-<header class="site-header"><div class="wrap nav">
-<a class="brand" href="../../"><span class="theta">&#920;</span>&nbsp;NAVIGATOR</a>
-<nav class="nav-links" aria-label="Primary">
-<a href="../../people/">People</a><a href="../../businesses/">Businesses</a>
-<div class="drop"><button aria-haspopup="true">Strategies &#9662;</button><div class="drop-menu">
-<a href="../../mental-models/">Mental Models</a><a href="../../decision-tools/">Decision Tools</a>
-<a href="../../business-models/">Business Models</a><a href="../../frameworks/">Frameworks</a><a href="../../moats/">Moats</a></div></div>
-<div class="drop"><button aria-haspopup="true">Learn &#9662;</button><div class="drop-menu">
-<a href="../../books/">Book Summaries</a><a href="../../reading-lists/">Reading Lists</a>
-<a href="../../guides/">Guides</a><a href="../../quotes/">Quote Collections</a><a href="../../paths/">Learning Paths</a></div></div>
-<a href="../../tools/">Tools</a><a href="../../ai/">AI</a><a href="../../about/">About</a></nav>
-<button class="menu-btn" id="menuBtn" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-</div></header>
-<div class="drawer" id="drawer"><div class="drawer-panel">
-<button class="drawer-close" data-close aria-label="Close menu">&times;</button>
-<a href="../../people/">People</a><a href="../../businesses/">Businesses</a><a href="../../tools/">Tools</a>
-<details class="drawer-group" open><summary>Strategies</summary>
-<a href="../../mental-models/">Mental Models</a><a href="../../decision-tools/">Decision Tools</a>
-<a href="../../business-models/">Business Models</a><a href="../../frameworks/">Frameworks</a><a href="../../moats/">Moats</a></details>
-<details class="drawer-group"><summary>Learn</summary>
-<a href="../../books/">Book Summaries</a><a href="../../reading-lists/">Reading Lists</a>
-<a href="../../guides/">Guides</a><a href="../../quotes/">Quote Collections</a><a href="../../paths/">Learning Paths</a></details>
-<a href="../../ai/">Artificial Intelligence</a><a href="../../newsletter/">Newsletter</a>
-<a href="../../about/">About</a><a href="../../contact/">Contact</a>
-<button class="btn ghost" id="a11yToggle" style="margin-top:14px">Aa Readable font</button>
-</div></div>
-<div class="head-band"><div class="wrap">
-<nav class="crumbs"><a href="../../">Home</a> &rsaquo; <a href="../../tools/">Tools</a> &rsaquo; Compounding Calculator</nav>
-<span class="eyebrow">Finance tool</span><h1>Compounding Calculator</h1>
-<p class="lede">See how money grows when returns build on themselves over time.</p></div></div>
-<div class="wrap"><div class="article">
-<nav class="toc" aria-label="Contents"><div class="toc-h">Contents</div><div id="toc"></div></nav>
-<article class="doc">
-<h2>About this tool</h2><p>Enter a starting amount, an annual return, a monthly contribution, and a time horizon to see the power of compounding — and how much of the final total comes from growth rather than what you put in.</p><p>This tool puts a concept into practice. Read the idea behind it: <a href="../../mental-models/compounding/">Compounding</a>.</p>
-<h2>The tool</h2>
+<body class="t-console" data-accent="tools">
+
+<div class="t-wrap">
+<div class="t-rail"><span><span class="dot"></span><a href="../../">Navigator</a> &middot; <a href="../../tools/">Decision Tools</a></span><span>Model <b>COMPOUND-01</b></span></div>
+<div class="t-crumbs"><a href="../../">Home</a> &rsaquo; <a href="../">Tools</a> &rsaquo; Compounding Calculator</div>
+<p class="t-eyebrow">Fixed-rate growth model</p>
+<h1>Compounding Calculator</h1>
+<p class="t-lede">Set a starting sum, a rate, a monthly deposit and a horizon. The engine runs the balance forward month by month and separates what you added from what growth added.</p>
+
+<div class="t-console-frame">
+  <div class="t-console-head"><span>Fixed-rate growth model</span>
+    <span class="t-lamps"><i class="t-lamp red"></i><i class="t-lamp"></i><i class="t-lamp go"></i></span></div>
+  <div class="t-console-inner">
 
 <div class="tool" style="border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--card)">
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px">
@@ -88,19 +64,21 @@ function calc(){
 ids.forEach(function(el){el.addEventListener('input',calc)});calc();
 })();
 </script>
-</article>
-<aside class="infobox"><div class="ib-top"></div>
-<div class="portrait mono">&#9881;</div>
-<div class="ib-body"><p class="ib-name">Compounding Calculator</p><p class="ib-tag">Finance tool</p>
-<div class="ib-row"><span class="ib-k">Type</span><span class="ib-v">Interactive</span></div>
-<div class="ib-row"><span class="ib-k">Data</span><span class="ib-v">Stays in your browser</span></div></div></aside>
-</div></div>
-<footer class="site-footer"><div class="spectrum-rule"></div><div class="wrap">
-<div class="foot"><div class="fbrand"><a class="brand" href="../../"><span class="theta">&#920;</span>&nbsp;NAVIGATOR</a>
-<p>An open reference for how the greatest people and companies think, build, and decide. Free, no login.</p></div>
-<div><h4>Libraries</h4><a href="../../people/">People</a><a href="../../businesses/">Businesses</a><a href="../../mental-models/">Mental Models</a><a href="../../decision-tools/">Decision Tools</a><a href="../../business-models/">Business Models</a></div><div><h4>Learn</h4><a href="../../books/">Books</a><a href="../../reading-lists/">Reading Lists</a><a href="../../guides/">Guides</a><a href="../../quotes/">Quotes</a><a href="../../paths/">Learning Paths</a></div><div><h4>Apply</h4><a href="../../tools/">Tools</a><a href="../../frameworks/">Frameworks</a><a href="../../moats/">Moats</a><a href="../../ai/">AI</a><a href="../../recommend/">What to study</a></div><div><h4>Site</h4><a href="../../about/">About</a><a href="../../newsletter/">Newsletter</a><a href="../../contact/">Contact</a><a href="../../search/">Search</a><a href="../../credits/">Credits</a></div></div>
-<div class="foot-legal"><a href="../../privacy/">Privacy</a><a href="../../terms/">Terms</a><a href="../../cookies/">Cookies</a><a href="../../refund/">Refund</a><a href="../../accessibility/">Accessibility</a><a href="../../disclaimer/">Disclaimer</a><span class="sp">&copy; 2026 Navigator</span></div>
-</div></footer>
-<script src="../../assets/js/main.js" defer></script>
-<script src="../../assets/js/wiki.js" defer></script>
+  </div>
+</div>
+<div class="t-readline"><span>UNIT <b>COMPOUND-01</b></span><span>INPUT &rarr; <b>OUTPUT</b></span><span>LOCAL &middot; <b>NO DATA SENT</b></span></div>
+
+<div class="t-prose">
+<h2><span class="t-h-n">01</span>What it is</h2><p>Compounding is the process by which the returns on an investment themselves begin to earn returns. In the early years the balance grows mostly because of what you put in; over time, the growth on prior growth quietly takes over and becomes the dominant force. This calculator makes that crossover visible.</p><p>The engine assumes interest compounds monthly and that each deposit lands at the end of the month. It is deliberately simple: no taxes, no fees, no inflation adjustment. The point is not a precise forecast of any real account but a clear feel for how the shape of compounding behaves as you change the inputs.</p>
+<h2><span class="t-h-n">02</span>How to use it</h2><p>Enter four numbers: the amount you start with, the annual return you expect, the amount you add each month, and the number of years you will leave it alone. Every keystroke re-runs the model instantly — nothing is sent anywhere, and all the arithmetic happens in your browser.</p><p>Read the three output registers together. ‘Final balance’ is what you end with. ‘You contributed’ is the sum of your starting amount plus every deposit. ‘Growth on growth’ is the difference — the part compounding produced for you rather than you saving it.</p>
+<h2><span class="t-h-n">03</span>Reading the output</h2><p>Watch the plot line rather than just the final number. A straight line would mean simple, linear saving; the upward curve is compounding at work, and the steeper it bends near the end, the more of your result is coming from growth rather than deposits. The readout line beneath the console shows the multiple on your deposits — how many times your contributions your final balance represents.</p>
+<h2><span class="t-h-n">04</span>When to use it</h2><p>Use it to build intuition before a long-term decision — whether to start investing now versus later, how much a small monthly increase changes a decades-out result, or why time in the market tends to matter more than the size of any single deposit.</p>
+<h2><span class="t-h-n">05</span>Worked example</h2><div class="t-example"><div class="t-ex-h">Example run</div><p>Start with $1,000, add $200 a month at an 8% annual return for 30 years. You contribute $73,000 in total, but end with roughly $309,000 — meaning about $236,000, over three-quarters of the result, is growth the deposits never touched. Cut the horizon to 20 years and the growth portion collapses far more than the balance, showing how much of compounding&#x27;s power lives in the final stretch.</p></div>
+<h2><span class="t-h-n">06</span>Common pitfalls</h2><ul><li>Treating the output as a prediction. Real returns are volatile and irregular; this shows the shape of compounding, not what any account will actually do.</li><li>Ignoring inflation. A large future number is worth less in today&#x27;s money; the figures here are nominal, not real.</li><li>Underrating the horizon. Shortening the number of years usually costs you far more than trimming the monthly deposit, because the last years carry the most growth.</li><li>Forgetting fees and taxes, which compound against you the same way returns compound for you.</li></ul>
+<p class="t-concept">Underlying idea: <a href="../../mental-models/compounding/">Compounding</a> &rsaquo;</p>
+</div>
+<div class="t-foot"><span><a href="../../tools/">&larr; All tools</a></span><span><a href="../../about/">About</a> &middot; <a href="../../search/">Search</a></span><span>&copy; Navigator</span></div>
+</div>
+
+
 </body></html>
