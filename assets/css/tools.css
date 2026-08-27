@@ -1,0 +1,140 @@
+/* ===========================================================================
+   Navigator · TOOLS console theme  (ELIZA / IBM 7094 archival-instrument look)
+   Scoped entirely under body.t-console so it cannot affect the rest of the site.
+   =========================================================================== */
+body.t-console{
+  --paper:#efe9dc; --paper-2:#e7e0cf; --ink:#191712; --ink-soft:#4a4536;
+  --hair:#c9c0aa; --panel:#12100b; --panel-ink:#e9e2cf; --panel-soft:#8d856d;
+  --lamp:#c8452b; --lamp-on:#e2673f; --go:#5c7a4a;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --serif:'Spectral',Georgia,'Times New Roman',serif;
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--serif); -webkit-font-smoothing:antialiased;
+  background-image:repeating-linear-gradient(to bottom,transparent 0 27px,rgba(120,110,80,.05) 27px 28px);
+}
+body.t-console *{box-sizing:border-box}
+body.t-console a{color:var(--lamp);text-decoration:none}
+body.t-console .t-wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+
+/* ---- top + bottom rails --------------------------------------------------- */
+.t-rail{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);
+  border-bottom:1px solid var(--hair);padding:12px 2px;margin-bottom:34px}
+.t-rail a{color:var(--ink-soft)}
+.t-rail a:hover{color:var(--ink)}
+.t-rail .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--go);
+  margin-right:7px;box-shadow:0 0 0 1px rgba(0,0,0,.15) inset}
+.t-rail b{color:var(--ink);font-weight:600}
+.t-foot{border-top:1px solid var(--hair);margin-top:56px;padding:22px 2px 70px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.t-foot a{color:var(--ink-soft)}.t-foot a:hover{color:var(--ink)}
+
+/* ---- masthead ------------------------------------------------------------- */
+.t-eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--lamp);margin:0 0 14px}
+body.t-console h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.02;margin:0 0 18px;letter-spacing:-.01em;color:var(--ink)}
+.t-lede{font-size:1.18rem;line-height:1.6;max-width:62ch;margin:0}
+.t-lede em{font-style:italic;color:var(--ink-soft)}
+.t-crumbs{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--ink-soft);margin:0 0 26px}
+.t-crumbs a{color:var(--ink-soft)}.t-crumbs a:hover{color:var(--ink)}
+
+/* ---- the console frame ---------------------------------------------------- */
+.t-console-frame{position:relative;margin-top:42px;border:1px solid var(--ink);
+  background:linear-gradient(180deg,#f3eee1,#e9e2cf);box-shadow:6px 6px 0 rgba(25,23,18,.14)}
+.t-console-frame::before{content:"";position:absolute;top:0;right:0;width:22px;height:22px;
+  background:var(--paper);border-left:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.t-console-head{display:flex;justify-content:space-between;align-items:center;gap:10px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);
+  padding:10px 16px;border-bottom:1px solid var(--hair)}
+.t-lamps{display:flex;gap:8px;align-items:center}
+.t-lamp{width:9px;height:9px;border-radius:50%;background:#b8ad90;box-shadow:0 0 0 1px rgba(0,0,0,.2) inset}
+.t-lamp.red{background:var(--lamp)}.t-lamp.go{background:var(--go)}
+.t-console-inner{padding:22px 20px}
+
+/* ---- widget restyle (existing widget markup adopts the console look) ------ */
+/* redefine the vars the inline widgets reference, so they pick up the palette */
+body.t-console .tool{--card:transparent;--line:var(--hair);--accent:var(--lamp);--ink:var(--ink);
+  --ink-mute:var(--ink-soft);--accent-ink:var(--lamp);
+  border:0 !important;border-radius:0 !important;background:transparent !important;padding:0 !important}
+body.t-console .tool label{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+body.t-console .tool input[type=number],
+body.t-console .tool input[type=text],
+body.t-console .tool input:not([type]){
+  font-family:var(--mono);font-size:1.05rem;color:var(--ink);background:transparent;
+  border:0;border-bottom:1.5px solid var(--ink);padding:3px 2px;font-variant-numeric:tabular-nums;outline:none}
+body.t-console .tool input::placeholder{color:#a99f84}
+body.t-console .tool input[type=range]{accent-color:var(--lamp);width:100%}
+body.t-console .tool input[type=checkbox]{accent-color:var(--lamp);width:15px;height:15px;vertical-align:-2px}
+
+/* buttons as console keys */
+body.t-console .btn,body.t-console .tool button{
+  font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+  border:1px solid var(--ink);background:var(--paper);color:var(--ink);padding:8px 14px;border-radius:0;cursor:pointer;
+  box-shadow:2px 2px 0 rgba(25,23,18,.18);transition:transform .04s,box-shadow .04s}
+body.t-console .btn:active,body.t-console .tool button:active{transform:translate(2px,2px);box-shadow:none}
+body.t-console .btn.primary{background:var(--ink);color:var(--paper)}
+body.t-console .btn.ghost{background:transparent}
+body.t-console .tool button[data-x],body.t-console .tool [data-x]{border:0;box-shadow:none;background:transparent;color:var(--ink-soft);padding:0 4px;letter-spacing:0}
+
+/* register readout blocks (stats-grid / stat) -> dark mainframe inset */
+body.t-console .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;
+  background:var(--panel);border:1px solid var(--ink);margin:6px 0 0}
+body.t-console .stat{padding:16px 16px;border-right:1px solid rgba(233,226,207,.14)}
+body.t-console .stat:last-child{border-right:0}
+body.t-console .stat .num{font-family:var(--mono);font-weight:600;font-size:1.7rem;color:#f2ead6;font-variant-numeric:tabular-nums;line-height:1.1}
+body.t-console .stat .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--panel-soft);margin-top:6px;
+  display:flex;align-items:center;gap:7px}
+body.t-console .stat .lbl::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--lamp);box-shadow:0 0 6px var(--lamp-on)}
+
+/* verdict / tactic strip */
+body.t-console .tactic{font-family:var(--serif);font-size:1rem;line-height:1.55;color:var(--ink);
+  border-left:3px solid var(--lamp);background:rgba(200,69,43,.06);padding:12px 16px;margin-top:16px}
+body.t-console .tactic b{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--lamp)}
+
+/* tables (decision matrix / expected value) as listings */
+body.t-console table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:.9rem}
+body.t-console th{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;text-align:left;padding:8px 6px;border-bottom:1px solid var(--ink)}
+body.t-console td{padding:8px 6px;border-bottom:1px solid var(--hair);color:var(--ink);font-variant-numeric:tabular-nums}
+
+/* quadrant boxes (eisenhower) */
+body.t-console .tool [style*="grid-template-columns:1fr 1fr"]>div{border:1px solid var(--ink) !important;background:transparent !important}
+body.t-console .tool b{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+body.t-console .tool small{color:var(--ink-soft)}
+body.t-console .tool ul{list-style:none;padding-left:0;margin:8px 0 0;font-family:var(--serif)}
+body.t-console .tool ul li{padding:3px 0;border-bottom:1px dotted var(--hair)}
+body.t-console .tool svg{border:1px solid var(--ink) !important;border-radius:0 !important;background:linear-gradient(180deg,#f3eee1,#efe9dc)}
+
+/* focus timer big display */
+body.t-console #ft_time{font-family:var(--mono) !important;font-variant-numeric:tabular-nums;color:var(--ink)}
+body.t-console #ft_mode{font-family:var(--mono);color:var(--lamp)}
+
+/* ---- extended write-up (prose) ------------------------------------------- */
+.t-prose{max-width:70ch;margin:52px 0 0}
+.t-prose h2{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--lamp);
+  margin:44px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--hair);display:flex;align-items:baseline;gap:12px}
+.t-prose h2 .t-h-n{color:var(--ink-soft);font-size:11px;letter-spacing:.1em}
+.t-prose p{font-size:1.06rem;line-height:1.72;margin:0 0 16px;color:var(--ink)}
+.t-prose ul{margin:0 0 16px;padding-left:0;list-style:none}
+.t-prose ul li{position:relative;padding:0 0 10px 22px;font-size:1.04rem;line-height:1.6}
+.t-prose ul li::before{content:"\2014";position:absolute;left:0;color:var(--lamp)}
+.t-prose .t-example{border:1px solid var(--ink);background:rgba(200,69,43,.05);padding:16px 18px;margin:0 0 16px}
+.t-prose .t-example .t-ex-h{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px}
+.t-prose .t-concept{font-family:var(--mono);font-size:.9rem;color:var(--ink-soft);margin-top:8px}
+
+/* ---- readout line under console ------------------------------------------ */
+.t-readline{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--ink-soft);
+  margin-top:20px;border-top:1px solid var(--hair);padding-top:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.t-readline b{color:var(--ink);font-weight:500}
+
+/* ---- index grid ----------------------------------------------------------- */
+.t-index{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:0;
+  border:1px solid var(--ink);border-bottom:0;margin-top:40px}
+.t-card{display:block;padding:22px 20px;border-bottom:1px solid var(--ink);border-right:1px solid var(--ink);
+  background:linear-gradient(180deg,#f3eee1,#ece6d6);position:relative;transition:background .12s}
+.t-card:hover{background:#f6f1e6}
+.t-card .t-card-no{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--ink-soft)}
+.t-card .t-card-cat{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--lamp);float:right}
+.t-card h3{font-family:var(--serif);font-weight:600;font-size:1.5rem;margin:14px 0 8px;color:var(--ink);letter-spacing:-.01em}
+.t-card p{font-size:.98rem;line-height:1.55;color:var(--ink-soft);margin:0}
+.t-card .t-card-go{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-top:14px;display:inline-block}
+@media(max-width:520px){.t-index{grid-template-columns:1fr}}
