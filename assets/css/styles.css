@@ -179,6 +179,34 @@ p{margin:0 0 1.05em}
 .principle h3{margin:.2em 0 .4em}
 .tactic{background:var(--accent-soft);border-radius:6px;padding:10px 14px;margin-top:12px;font-size:.96rem}
 .tactic b{color:var(--accent-ink)}
+.bt{border-radius:6px;padding:8px 14px;margin-top:10px;font-size:.95rem;line-height:1.5}
+.bt-ben{background:rgba(46,160,110,.10);border-left:3px solid rgba(46,160,110,.55)}
+.bt-tr{background:rgba(200,120,40,.10);border-left:3px solid rgba(200,120,40,.55)}
+.bt b{letter-spacing:.02em}
+
+/* ---------- deep-profile blocks: table, timeline, flow, callout ---------- */
+.dtable{margin:22px 0}
+.dtable .st-h{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.dtable-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+.dtable table{border-collapse:collapse;width:100%;font-size:.94rem}
+.dtable th,.dtable td{text-align:left;padding:9px 13px;border-bottom:1px solid var(--line);vertical-align:top}
+.dtable thead th{background:var(--accent-soft);font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink);white-space:nowrap}
+.dtable tbody tr:last-child td{border-bottom:none}
+.dtable td:first-child{font-weight:600}
+.timeline{margin:22px 0}
+.timeline .st-h{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.tl{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:6px 0 14px 20px}
+.tl li::before{content:"";position:absolute;left:-7px;top:11px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.tl-y{display:inline-block;font-family:var(--mono);font-size:.8rem;font-weight:700;color:var(--accent-ink);margin-right:10px}
+.tl-t{color:var(--ink-soft)}
+.flow{margin:22px 0}
+.flow .st-h{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.flow-ol{margin:0;padding-left:22px}
+.flow-ol li{padding:5px 0;color:var(--ink-soft)}
+.callout{background:var(--accent-soft);border-radius:8px;padding:14px 16px;margin:18px 0}
+.callout .co-k{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:5px}
+.callout p{margin:0}
 
 /* ---------- index / grid pages ---------- */
 .section-intro{padding:8px 0 6px;color:var(--ink-soft);max-width:56rem}
